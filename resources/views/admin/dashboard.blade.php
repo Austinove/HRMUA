@@ -12,7 +12,7 @@
                             <i class="zmdi zmdi-account-o"></i>
                         </div>
                         <div class="text">
-                            <h2>10368</h2>
+                            <h2>{{DB::table('professionals')->count()}}</h2>
                             <span>Proffesional Members</span>
                         </div>
                     </div>
@@ -30,7 +30,7 @@
                             <i class="zmdi zmdi-account-o"></i>
                         </div>
                         <div class="text">
-                            <h2>388,688</h2>
+                            <h2>{{DB::table('corporates')->count()}}</h2>
                             <span>Cooporate Members</span>
                         </div>
                     </div>
@@ -48,7 +48,7 @@
                             <i class="zmdi zmdi-account-o"></i>
                         </div>
                         <div class="text">
-                            <h2>1,086</h2>
+                            <h2>{{DB::table('students')->count()}}</h2>
                             <span>Students Members</span>
                         </div>
                     </div>
@@ -66,7 +66,7 @@
                             <i class="zmdi zmdi-account-o"></i>
                         </div>
                         <div class="text">
-                            <h2>1,086</h2>
+                            <h2>{{DB::table('retireds')->count()}}</h2>
                             <span>Retiered Members</span>
                         </div>
                     </div>
@@ -77,7 +77,7 @@
             </div>
         </div>
     </div>
-    <div class="row">
+    {{-- <div class="row">
         <div class="col-md-12">
             <!-- DATA TABLE-->
             <div class="table-responsive m-b-40">
@@ -153,6 +153,6 @@
             </div>
             <!-- END DATA TABLE                  -->
         </div>
-    </div>
+    </div> --}}
 </div>
 @endsection

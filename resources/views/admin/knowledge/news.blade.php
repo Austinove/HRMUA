@@ -1,102 +1,175 @@
 @extends('layouts.master')
 @section('content')
-@if(Session::has('success'))
-    <div class="alert alert-success text-center" role="alert">
-        {{Session::get('success')}}
-    </div>
-@endif
+<div class="container">
+    <!-- ALERT-->
+    @if(Session::has('success'))
+        <div class="alert au-alert-success alert-dismissible fade show au-alert au-alert--70per" role="alert">
+            <i class="zmdi zmdi-check-circle"></i>
+            <span class="content">{{Session::get('success')}}</span>
+            <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">
+                    <i class="zmdi zmdi-close-circle"></i>
+                </span>
+            </button>
+        </div>
+    @endif
+    <!-- END ALERT-->
+</div>
+
 <div class="row mt-3">
-    <div class="col-sm-12">
-        <!--Striped table-->
-        <div class="mt-1 mb-3 p-3 button-container bg-white border shadow-sm">
+    <div class="col-md-12">
+        <!-- TOP CAMPAIGN-->
+        <div class="top-campaign">
             <div class="row border-bottom mb-4">
                 <div class="col-sm-8 pt-2">
-                    <h6 class="mb-2">News</h6>
-                    <code class="mb-2">News updates</code>
+                    <h3 class="title-3 m-b-30">News updates</h3>
                 </div>
-                <div class="col-sm-4 text-right pb-3">
-                    <button class="btn btn-round btn-theme" data-toggle="modal" data-target="#newsAdd"><i class="fa fa-plus"></i> Add News</button>
+                <div class="col-sm-4 text-right pb-3 mb-5">
+                    <button class="au-btn-plus" data-toggle="modal" data-target="#newsAdd"><i class="zmdi zmdi-plus"></i> </button>
                 </div>
             </div>
             
-            
-            <table class="table table-striped" id="project_table">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Title</th>
-                        <th>Category</th>
-                        <th>Description</th>
-                        <th>Image</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @if (count($newsletter)>0)    
-                        @foreach ($newsletter as $item)
-                            <tr>
-                                <td>{{$item->id}}</td>
-                                <td class="align-middle">{{$item->newsTitle}}</td>
-                                <td class="align-middle">{{$item->newsCategory}}</td>
-                                <td class="align-middle">{{$item->newsDesc}}</td>
-                                <td class="align-middle"><img src="{{ asset('uploads/news/'.$item ->image)}}" width="80" alt="Image"></td>
-                                <td class="align-middle text-center">
-                                    <a href ="#"  class="btn text-theme p-1 edit"><i class="fas fa-edit"></i></i></a>
-                                    <button class="btn btn-link text-danger p-1"><i class="fas fa-trash"></i></button>
-                                </td>
-                            </tr>
-                        @endforeach       
-                    @endif
-                </tbody>
-            </table>
-        </div>
-        <!--/Striped table-->
-        <!--Knowledge Add-->
-        <div class="modal fade" id="newsAdd" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Add News</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+            <div class="table-responsive m-b-40">
+                <table class="table table-borderless table-data3">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Category</th>
+                            <th>Description</th>
+                            <th>Image</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (count($newsletter)>0)    
+                            @foreach ($newsletter as $item)
+                                <tr>
+                                    <td class="align-middle">{{$item->newsTitle}}</td>
+                                    <td class="align-middle">{{$item->newsCategory}}</td>
+                                    <td class="align-middle">{{$item->newsDesc}}</td>
+                                    <td class="align-middle"><img src="{{ asset('uploads/news/'.$item ->image)}}" width="60px" alt="Image"></td>
+                                    <td >
+                                        <div class="table-data-feature">
+                                            <a href="#" class="item" data-toggle="modal" data-placement="top" data-target='#newsUpdate{{ $item->id }}' title="Edit">
+                                                <i class="zmdi zmdi-edit"></i>
+                                            </a>
+                                            <a href="/delete-news/{{ $item->id }}" class="item" data-toggle="tooltip" data-placement="top" title="Delete">
+                                                <i class="zmdi zmdi-delete"></i>
+                                            </a>
+                                        </div>
+                                        
+                                    </td> 
+                                </tr>
+                                <!-- modal medium -->
+                                <div class="modal fade" id="newsUpdate{{ $item->id }}" tabindex="-1" role="dialog" aria-labelledby="mediumModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="mediumModalLabel">Edit News Detail</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <form class="form-horizontal mt-4 mb-5" method="POST" action="/edit-news/{{ $item->id }}" enctype="multipart/form-data" id="editform">
+                                                @csrf
+                                                {{ method_field('PUT') }}
+                                                <div class="modal-body">
+                                                    <div class="form-group row">
+                                                        <label class="control-label col-sm-2" for="newsTitle">Title</label>
+                                                        <div class="col-sm-10">
+                                                            <input type="text" class="form-control" name="newsTitle" value="{{$item->newsTitle}}"/>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="control-label col-sm-2" for="newsCategory">News Category</label>
+                                                        <div class="col-sm-10">
+                                                            <input type="text" class="form-control" name="newsCategory" value="{{$item->newsCategory}}"/>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="control-label col-sm-2" for="newsDesc">Description</label>
+                                                        <div class="col-sm-10">
+                                                            <textarea type="text" class = "form-control" rows = "3" name="newsDesc" >{{$item->newsDesc}}</textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group" >
+                                                        <img src="{{ asset('uploads/news/'.$item ->image)}}" width="60" alt=" Image" >
+                                                        <br></br>
+                                                        <input type="file" name="image" class="form-control-file ">
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-primary btn-sm">
+                                                        <i class="fa fa-dot-circle-o"></i> Submit
+                                                    </button>
+                                                    <button type="reset" class="btn btn-danger btn-sm" data-dismiss="modal">
+                                                        <i class="fa fa-ban"></i> Close
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end modal medium -->
+                            @endforeach
+                        @endif()
+                       
+                    </tbody>
+                </table>
+                <div class="modal fade" id="newsAdd" tabindex="-1" role="dialog" aria-labelledby="mediumModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="mediumModalLabel">Add News Detail</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <form class="form-horizontal mt-4 mb-5" method="POST" action="/post-news" enctype="multipart/form-data" id="editform">
+                                @csrf
+                                <div class="modal-body">
+                                    <div class="form-group row">
+                                        <label class="control-label col-sm-2" for="newsTitle">Title</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" name="newsTitle" placeholder="News Title" required/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="control-label col-sm-2" for="newsCategory">News Category</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" name="newsCategory" placeholder="News Category" required/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="control-label col-sm-2" for="newsDesc">Description</label>
+                                        <div class="col-sm-10">
+                                            <textarea type="text" class = "form-control" rows = "3" name="newsDesc" placeholder = "News Description" required></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="control-label col-sm-2" for="image">Upload image</label>
+                                        <div class="col-sm-10">
+                                            <input type="file" class="form-control" name="image">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-primary btn-sm">
+                                        <i class="fa fa-dot-circle-o"></i> Submit
+                                    </button>
+                                    <button type="reset" class="btn btn-danger btn-sm" data-dismiss="modal">
+                                        <i class="fa fa-ban"></i> Close
+                                    </button>
+                                </div>
+                            </form>
+                           
+                        </div>
                     </div>
-                    <form class="form-horizontal mt-4 mb-5" method="POST" action="/post-news" enctype="multipart/form-data">
-                        @csrf
-                        <div class="modal-body">
-                            <div class="form-group row">
-                                <label class="control-label col-sm-2" for="newsTitle">Title</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="newsTitle" placeholder="News Title" required/>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="control-label col-sm-2" for="newsCategory">News Category</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="newsCategory" placeholder="News Category" required/>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="control-label col-sm-2" for="newsDesc">Description</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="newsDesc" placeholder="News Description" required/>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="control-label col-sm-2" for="image">Upload image</label>
-                                <div class="col-sm-10">
-                                    <input type="file" class="form-control" name="image">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary" >Save</button>
-                        </div>
-                    </form> 
                 </div>
             </div>
         </div>
+        <!--  END TOP CAMPAIGN-->
     </div>
 </div>
 @endsection

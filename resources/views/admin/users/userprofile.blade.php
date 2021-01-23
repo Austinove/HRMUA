@@ -10,21 +10,18 @@
         <!--User profile header-->
         <div class="mt-1 mb-3 button-container bg-white border shadow-sm">
             <div class="profile-bg p-5">
-                <img src="{{asset('img/jd-150.png')}}" height="125px" width="125px" class="rounded-circle shadow profile-img" />
+                <img src="{{ asset('uploads/user/'.Auth::User()->image)}}" height="125px" width="125px" class="rounded-circle shadow profile-img" />
             </div>
             <div class="profile-bio-main container-fluid">
                 <div class="row">
                     <div class="col-md-5 offset-md-3 col-sm-12 offset-sm-0 col-12 bio-header">
                         <h3 class="mt-4">{{Auth::User()->fname." ".Auth::User()->lname}}</h3>
-                        <span class="text-muted mt-0 bio-request">Senior Programmer</span>
+                        <span class="text-muted mt-0 bio-request">System Administrator</span>
                     </div>
                 </div>
             </div>
         </div>
         <!--/User profile header-->
-        <!--/User profile body-->
-        
-        <!--/User profile body-->
 
     </div>
 </div>
@@ -44,8 +41,12 @@
                 <div class="form-group" >
                     <input type="text" class="form-control" name="email"  value="{{Auth::User()->email}}">
                 </div>
+                <div class="form-group" >
+                    <img src="{{ asset('uploads/user/'.Auth::User()->image)}}" width="60" alt=" Image" >
+                    <br></br>
+                    <input type="file" name="image" class="form-control-file ">
+                </div>
                 <button type="submit" class="btn btn-primary" style="float: right;">Update Account</button>
-                
             </form>
 
         </div><!--/login form-->
