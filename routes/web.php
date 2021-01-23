@@ -41,18 +41,27 @@ Route::get('/general', 'applicatns\GeneralController@index');
 professionals
 */
 Route::get('/professional', 'applicatns\ProfessionalController@index');
+Route::get('/professional/{id}', 'applicatns\ProfessionalController@singlePro');
 /*
 Cooperates
 */
 Route::get('/cooperates', 'applicatns\CooperateController@index');
+Route::get('/cooperates/{id}', 'applicatns\CooperateController@singleCoporate');
 /*
 Student
 */
 Route::get('/student', 'applicatns\StudentController@index');
+Route::get('/student/{id}', 'applicatns\StudentController@singleStudent');
+Route::get('/student/file/{id}', 'applicatns\StudentController@viewFile');
+Route::get('/student/image/{id}', 'applicatns\StudentController@viewImage');
+Route::get('/approve/student/{id}', 'applicatns\StudentController@approve');
+Route::get('/review/student/{id}', 'applicatns\StudentController@underReview');
+Route::get('/decline/student/{id}', 'applicatns\StudentController@decline');
 /*
 Retired
 */
 Route::get('/retired', 'applicatns\RetiredController@index');
+Route::get('/retired/{id}', 'applicatns\RetiredController@singleRetired');
 /*
 MemberType
 */

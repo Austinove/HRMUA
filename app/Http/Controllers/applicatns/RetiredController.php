@@ -20,6 +20,11 @@ class RetiredController extends Controller
         return view('admin.applicants.retired')->with('retired',$retired);
     }
 
+    public function singleRetired($id){
+        $retired = Retired::find($id);
+        return view("admin.applicants.retiredPage")->with("retired", $retired);
+    }
+
     /**
      * Show the form for creating a new resource.
      *

@@ -3,7 +3,7 @@
         <div class="header4-wrap">
             <div class="header__logo">
                 <a href="/dashboard">
-                    <img src="{{asset('assets/img/logo/logo.jpg')}}" class="custom-logo" alt="HRMUA Logo" />
+                    <img src="{{asset('/assets/img/logo/logo.jpg')}}" class="custom-logo" alt="HRMUA Logo" />
                 </a>
             </div>
             <div class="header__tool">
@@ -39,7 +39,7 @@
                 <div class="account-wrap">
                     <div class="account-item account-item--style2 clearfix js-item-menu">
                         <div class="image">
-                            <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                            <img src="/images/icon/avatar-01.jpg" alt="John Doe" />
                         </div>
                         <div class="content">
                             <a class="js-acc-btn" href="#">john doe</a>
@@ -48,7 +48,7 @@
                             <div class="info clearfix">
                                 <div class="image">
                                     <a href="#">
-                                        <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                        <img src="/images/icon/avatar-01.jpg" alt="John Doe" />
                                     </a>
                                 </div>
                                 <div class="content">

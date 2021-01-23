@@ -93,7 +93,8 @@ class StudentController extends Controller
                 'email' => $request->email,
                 'experience' => $request->experience,
                 'completions' => $request->completions,
-                'title' => $request->title
+                'title' => $request->title,
+                'approve' => 0
             ]);
             $response = [
             'success' => true,

@@ -20,6 +20,12 @@ class ProfessionalController extends Controller
         return view('admin.applicants.professional')->with('proffessionals', $proffessionals);
     }
 
+    public function singlePro($id)
+    {
+        $professional = Professional::find($id);
+        return view("admin.applicants.professionalPage")->with("professional", $professional);
+    }
+
     /**
      * Show the form for creating a new resource.
      *

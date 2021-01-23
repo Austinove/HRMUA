@@ -85,6 +85,7 @@ class RetiredController extends Controller
             'interest' => $request->interest,
             'qualification' => $request->qualification,
             'experience' => $request->experience,
+            'approval' => 0
         ]);
 
         // return response

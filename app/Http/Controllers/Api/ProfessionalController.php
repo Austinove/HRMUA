@@ -43,7 +43,6 @@ class ProfessionalController extends Controller
      */
     public function store(Request $request)
     {
-        
         $input = $request->all();
 
         $validator = Validator::make($input, [
@@ -53,7 +52,6 @@ class ProfessionalController extends Controller
             'title' => 'required',
             'dob' => 'required',
             'nationality' => 'required',
-            // 'mailingAdd' => 'required',
             'telephone' => 'required',
             'fax' => 'required',
             'email' => 'required',

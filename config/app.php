@@ -176,6 +176,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        //pdf readers
+        Barryvdh\DomPDF\ServiceProvider::class,
+
     ],
 
     /*

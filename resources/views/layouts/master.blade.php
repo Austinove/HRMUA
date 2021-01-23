@@ -10,6 +10,7 @@
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
+    <link rel="icon" href="{{ asset('assets/img/logo/icon.PNG')}}" type="image/png">
     <title>HRMUA</title>
 
     <!-- Fontfaces CSS-->
