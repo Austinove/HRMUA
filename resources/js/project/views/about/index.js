@@ -13,9 +13,6 @@ import {
 import CustomHeader from "../../components/Headers/customHeader";
 
 const AboutUs = () => {
-    const styless = {
-        backgroundImage: "url(/assets/img/logo/home-img.jpg)"
-    };
     return (
         <>
             <div
@@ -42,8 +39,7 @@ const AboutUs = () => {
             </div>
             <div className="main">
                 <div
-                    className="head-section section text-left page-header"
-                    style={styless}
+                    className="head-section section text-left page-header aboutus-bg"
                 >
                     <Container>
                         <Row>

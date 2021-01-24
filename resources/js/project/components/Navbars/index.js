@@ -107,7 +107,7 @@ function TopNavbar() {
                     <DropdownItem to="/about" tag={Link}>
                       About HRMAU
                     </DropdownItem>
-                    <DropdownItem to="/leadership" tag={Link}>
+                    <DropdownItem to="/aleadership" tag={Link}>
                       Leadership
                     </DropdownItem>
                   </DropdownMenu>

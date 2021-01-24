@@ -1,13 +1,19 @@
 import CustomHeader from "../../components/Headers/customHeader";
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
-// import { assetPath } from "../../constants";
+import profile1 from "../../assets/img/profiles/profile1.jpeg";
+import profile2 from "../../assets/img/profiles/profile2.jpeg";
+import profile3 from "../../assets/img/profiles/profile3.jpeg";
+import profile4 from "../../assets/img/profiles/profile4.jpeg";
+import profile5 from "../../assets/img/profiles/profile5.jpeg";
+import profile6 from "../../assets/img/profiles/profile6.jpeg";
+import profile7 from "../../assets/img/profiles/profile7.jpeg";
+import profile8 from "../../assets/img/profiles/profile8.jpeg";
+import profile9 from "../../assets/img/profiles/profile9.jpeg";
+import profile10 from "../../assets/img/profiles/profile10.jpeg";
+import profile11 from "../../assets/img/profiles/profile11.jpeg";
 
 const Leadership = () => {
-    const styless = {
-        backgroundImage: "url(assets/img/logo/home-img.jpg)",
-        minHeight: "30vh"
-    };
     return (
         <>
             <div
@@ -80,7 +86,7 @@ const Leadership = () => {
                                         <img
                                             alt="member-image"
                                             className="img-circle img-no-padding img-responsive"
-                                            src="/assets/img/faces/clem-onojeghuo-2.jpg"
+                                            src={profile1}
                                         />
                                     </Col>
                                     <Col md={6}>
@@ -112,7 +118,7 @@ const Leadership = () => {
                                         <img
                                             alt="member-image"
                                             className="img-circle img-no-padding img-responsive"
-                                            src="/assets/img/faces/clem-onojeghuo-2.jpg"
+                                            src={profile2}
                                         />
                                     </Col>
                                     <Col md={6}>
@@ -144,7 +150,7 @@ const Leadership = () => {
                                         <img
                                             alt="member-image"
                                             className="img-circle img-no-padding img-responsive"
-                                            src="/assets/img/faces/clem-onojeghuo-2.jpg"
+                                            src={profile3}
                                         />
                                     </Col>
                                     <Col md={6}>
@@ -176,7 +182,231 @@ const Leadership = () => {
                                         <img
                                             alt="member-image"
                                             className="img-circle img-no-padding img-responsive"
-                                            src="/assets/img/faces/clem-onojeghuo-2.jpg"
+                                            src={profile4}
+                                        />
+                                    </Col>
+                                    <Col md={6}>
+                                        <h5 className="font-14 font-weight-bold mb-2">
+                                            Member Name
+                                        </h5>
+                                        <strong className="font-14">
+                                            Human Resource Managers ’Association
+                                            of Uganda
+                                        </strong>
+                                        <p className="cutom-description custom-color">
+                                            We salute you and thank you for the
+                                            trust and confidence accorded to the
+                                            new GC 2020-2022. We have a well
+                                            balanced team by generations,
+                                            experience, gender and key HR
+                                            Practice sectors. We look forward to
+                                            your support in executing our
+                                            mandate. Thank you for your kind
+                                            congratulatory messages. Together we
+                                            can.
+                                        </p>
+                                    </Col>
+                                </Row>
+                            </Col>
+                            <Col className="mt-3" lg={6} md={6} sm={12}>
+                                <Row>
+                                    <Col md={6}>
+                                        <img
+                                            alt="member-image"
+                                            className="img-circle img-no-padding img-responsive"
+                                            src={profile5}
+                                        />
+                                    </Col>
+                                    <Col md={6}>
+                                        <h5 className="font-14 font-weight-bold mb-2">
+                                            Member Name
+                                        </h5>
+                                        <strong className="font-14">
+                                            Human Resource Managers ’Association
+                                            of Uganda
+                                        </strong>
+                                        <p className="cutom-description custom-color">
+                                            We salute you and thank you for the
+                                            trust and confidence accorded to the
+                                            new GC 2020-2022. We have a well
+                                            balanced team by generations,
+                                            experience, gender and key HR
+                                            Practice sectors. We look forward to
+                                            your support in executing our
+                                            mandate. Thank you for your kind
+                                            congratulatory messages. Together we
+                                            can.
+                                        </p>
+                                    </Col>
+                                </Row>
+                            </Col>
+                            <Col className="mt-3" lg={6} md={6} sm={12}>
+                                <Row>
+                                    <Col md={6}>
+                                        <img
+                                            alt="member-image"
+                                            className="img-circle img-no-padding img-responsive"
+                                            src={profile6}
+                                        />
+                                    </Col>
+                                    <Col md={6}>
+                                        <h5 className="font-14 font-weight-bold mb-2">
+                                            Member Name
+                                        </h5>
+                                        <strong className="font-14">
+                                            Human Resource Managers ’Association
+                                            of Uganda
+                                        </strong>
+                                        <p className="cutom-description custom-color">
+                                            We salute you and thank you for the
+                                            trust and confidence accorded to the
+                                            new GC 2020-2022. We have a well
+                                            balanced team by generations,
+                                            experience, gender and key HR
+                                            Practice sectors. We look forward to
+                                            your support in executing our
+                                            mandate. Thank you for your kind
+                                            congratulatory messages. Together we
+                                            can.
+                                        </p>
+                                    </Col>
+                                </Row>
+                            </Col>
+                            <Col className="mt-3" lg={6} md={6} sm={12}>
+                                <Row>
+                                    <Col md={6}>
+                                        <img
+                                            alt="member-image"
+                                            className="img-circle img-no-padding img-responsive"
+                                            src={profile7}
+                                        />
+                                    </Col>
+                                    <Col md={6}>
+                                        <h5 className="font-14 font-weight-bold mb-2">
+                                            Member Name
+                                        </h5>
+                                        <strong className="font-14">
+                                            Human Resource Managers ’Association
+                                            of Uganda
+                                        </strong>
+                                        <p className="cutom-description custom-color">
+                                            We salute you and thank you for the
+                                            trust and confidence accorded to the
+                                            new GC 2020-2022. We have a well
+                                            balanced team by generations,
+                                            experience, gender and key HR
+                                            Practice sectors. We look forward to
+                                            your support in executing our
+                                            mandate. Thank you for your kind
+                                            congratulatory messages. Together we
+                                            can.
+                                        </p>
+                                    </Col>
+                                </Row>
+                            </Col>
+                            <Col className="mt-3" lg={6} md={6} sm={12}>
+                                <Row>
+                                    <Col md={6}>
+                                        <img
+                                            alt="member-image"
+                                            className="img-circle img-no-padding img-responsive"
+                                            src={profile8}
+                                        />
+                                    </Col>
+                                    <Col md={6}>
+                                        <h5 className="font-14 font-weight-bold mb-2">
+                                            Member Name
+                                        </h5>
+                                        <strong className="font-14">
+                                            Human Resource Managers ’Association
+                                            of Uganda
+                                        </strong>
+                                        <p className="cutom-description custom-color">
+                                            We salute you and thank you for the
+                                            trust and confidence accorded to the
+                                            new GC 2020-2022. We have a well
+                                            balanced team by generations,
+                                            experience, gender and key HR
+                                            Practice sectors. We look forward to
+                                            your support in executing our
+                                            mandate. Thank you for your kind
+                                            congratulatory messages. Together we
+                                            can.
+                                        </p>
+                                    </Col>
+                                </Row>
+                            </Col>
+                            <Col className="mt-3" lg={6} md={6} sm={12}>
+                                <Row>
+                                    <Col md={6}>
+                                        <img
+                                            alt="member-image"
+                                            className="img-circle img-no-padding img-responsive"
+                                            src={profile9}
+                                        />
+                                    </Col>
+                                    <Col md={6}>
+                                        <h5 className="font-14 font-weight-bold mb-2">
+                                            Member Name
+                                        </h5>
+                                        <strong className="font-14">
+                                            Human Resource Managers ’Association
+                                            of Uganda
+                                        </strong>
+                                        <p className="cutom-description custom-color">
+                                            We salute you and thank you for the
+                                            trust and confidence accorded to the
+                                            new GC 2020-2022. We have a well
+                                            balanced team by generations,
+                                            experience, gender and key HR
+                                            Practice sectors. We look forward to
+                                            your support in executing our
+                                            mandate. Thank you for your kind
+                                            congratulatory messages. Together we
+                                            can.
+                                        </p>
+                                    </Col>
+                                </Row>
+                            </Col>
+                            <Col className="mt-3" lg={6} md={6} sm={12}>
+                                <Row>
+                                    <Col md={6}>
+                                        <img
+                                            alt="member-image"
+                                            className="img-circle img-no-padding img-responsive"
+                                            src={profile10}
+                                        />
+                                    </Col>
+                                    <Col md={6}>
+                                        <h5 className="font-14 font-weight-bold mb-2">
+                                            Member Name
+                                        </h5>
+                                        <strong className="font-14">
+                                            Human Resource Managers ’Association
+                                            of Uganda
+                                        </strong>
+                                        <p className="cutom-description custom-color">
+                                            We salute you and thank you for the
+                                            trust and confidence accorded to the
+                                            new GC 2020-2022. We have a well
+                                            balanced team by generations,
+                                            experience, gender and key HR
+                                            Practice sectors. We look forward to
+                                            your support in executing our
+                                            mandate. Thank you for your kind
+                                            congratulatory messages. Together we
+                                            can.
+                                        </p>
+                                    </Col>
+                                </Row>
+                            </Col>
+                            <Col className="mt-3" lg={6} md={6} sm={12}>
+                                <Row>
+                                    <Col md={6}>
+                                        <img
+                                            alt="member-image"
+                                            className="img-circle img-no-padding img-responsive"
+                                            src={profile11}
                                         />
                                     </Col>
                                     <Col md={6}>

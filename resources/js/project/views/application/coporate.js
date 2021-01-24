@@ -61,7 +61,7 @@ const Coporate = ({ submit_coporate, userData, loading, submitError }) => {
           submit_coporate(values);
           staffMembers = [];
           resetForm({});
-          setDeclar(false);
+          setDeclar(true);
         }
       }}>
       {({
@@ -454,7 +454,7 @@ const Coporate = ({ submit_coporate, userData, loading, submitError }) => {
                           List Interested Staff Members <br />
                           <i className="text-danger font-12">
                             (Make sure the list matches the total number of
-                            staff members entered up)
+                            staff members entered above)
                           </i>
                         </span>
                       </Row>

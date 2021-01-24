@@ -14,6 +14,12 @@
                             <div class="row d-flex">
                                 <div class="mx-auto d-block">
                                     <div class="phone text-sm-left mt-3">
+                                        <i class="fa fa-shield" aria-hidden="true"></i> <span><strong class="ml-1">Sex: </strong> {{ $professional->sex }}</span>
+                                    </div>
+                                    <div class="location text-sm-left mt-3">
+                                        <i class="fa fa-birthday-cake" aria-hidden="true"></i><span><strong class="ml-1"> DOB: </strong> {{ $professional->dob }}</span>
+                                    </div>
+                                    <div class="phone text-sm-left mt-3">
                                         <i class="fa fa-phone" aria-hidden="true"></i> <span><strong class="ml-1">Contact: </strong> {{ $professional->telephone }}</span>
                                     </div>
                                     <div class="location text-sm-left mt-3">
@@ -21,11 +27,40 @@
                                     </div>
                                 </div>
                                 <div class="mx-auto d-block">
+                                    <div class="title text-sm-left mt-3">
+                                        <i class="fa fa-tag" aria-hidden="true"></i><span><strong class="ml-1">Title: </strong> {{ $professional->title }}</span>
+                                    </div>
+                                    <div class="location text-sm-left mt-3">
+                                        <i class="fa fa-map-marker"></i> <span><strong class="ml-1"> Fax: </strong> {{ $professional->fax }}</span>
+                                    </div>
                                     <div class="email text-sm-left mt-3">
-                                        <i class="fa fa-envelope" aria-hidden="true"></i><span><strong class="ml-1">Email: </strong> {{ $professional->email }}</span></div>
-                                        <div class="text-sm-left mt-3">
-                                        <i class="fa fa-file-archive-o" aria-hidden="true"></i><span><strong class="ml-1">Experience: </strong> {{ $professional->experience }}</span></div>
+                                        <i class="fa fa-envelope" aria-hidden="true"></i><span><strong class="ml-1">Email: </strong> {{ $professional->email }}</span>
+                                    </div>
+                                    <div class="text-sm-left mt-3">
+                                        <i class="fa fa-file-archive-o" aria-hidden="true"></i><span><strong class="ml-1">Experience: </strong> {{ $professional->experience }}</span>
+                                    </div>
                                 </div>
+                            </div>
+                            <hr/>
+                            <div class="container">
+                                <div class="row d-flex">
+                                <div class="mx-auto d-block">
+                                    <div class="phone text-sm-left mt-3">
+                                        <i class="fa fa-tags" aria-hidden="true"></i><span><strong class="ml-1">Job Title: </strong> {{ $professional->jobTitle }}</span>
+                                    </div>
+                                    <div class="email text-sm-left mt-3">
+                                        <i class="fa fa-envelope" aria-hidden="true"></i><span><strong class="ml-1">Employer Email: </strong> {{ $professional->employerEmail }}</span>
+                                    </div>
+                                </div>
+                                <div class="mx-auto d-block">
+                                    <div class="phone text-sm-left mt-3">
+                                        <i class="fa fa-user" aria-hidden="true"></i><span><strong class="ml-1">Employer Name: </strong> {{ $professional->employer }}</span>
+                                    </div>
+                                    <div class="location text-sm-left mt-3">
+                                        <i class="fa fa-map-marker"></i> <span><strong class="ml-1"> Employer Loaction: </strong> {{ $professional->employerLocation }}</span>
+                                    </div>
+                                </div>
+                            </div>
                             </div>
                             <hr/>
                             <div class="container">
@@ -34,6 +69,14 @@
                                         <div class="card-text text-sm-left">
                                             <strong>Interests</strong><br>
                                             <p>{{ $professional->interest }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row d-flex mt-2">
+                                    <div class="mx-auto col-md-10">
+                                        <div class="card-text text-sm-left">
+                                            <strong>Qualifications</strong><br>
+                                            <p>{{ $professional->qualification }}</p>
                                         </div>
                                     </div>
                                 </div>

@@ -37,7 +37,7 @@ const App = () => {
                         render={props => <AboutUs {...props} />}
                     />
                     <Route
-                        path="/leadership"
+                        path="/aleadership"
                         exact
                         render={props => <Leadership {...props} />}
                     />

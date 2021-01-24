@@ -123,6 +123,7 @@ function HomePage({
                                             management and development
                                         </h5>
                                         <br />
+                                        <Link to={`/about`}>
                                         <Button
                                             className="btn-link text-info text-capitalize font-weight-normal"
                                             color="primary"
@@ -134,6 +135,7 @@ function HomePage({
                                                 aria-hidden="true"
                                             ></i>
                                         </Button>
+                                        </Link>
                                     </Col>
                                     <Col className="mx-auto text-center" md="4">
                                         <img
@@ -149,6 +151,7 @@ function HomePage({
                                             the future of the people profession
                                         </h5>
                                         <br />
+                                        <Link to={`/about`}>
                                         <Button
                                             className="btn-link text-info text-capitalize font-weight-normal"
                                             color="primary"
@@ -160,6 +163,7 @@ function HomePage({
                                                 aria-hidden="true"
                                             ></i>
                                         </Button>
+                                        </Link>
                                     </Col>
                                     <Col className="mx-auto text-center" md="4">
                                         <img
@@ -175,17 +179,19 @@ function HomePage({
                                             in workspaces and lives every day
                                         </h5>
                                         <br />
-                                        <Button
-                                            className="btn-link text-info text-capitalize font-weight-normal"
-                                            color="primary"
-                                            outline
-                                        >
-                                            Read newsletter{" "}
-                                            <i
-                                                className="fa fa-caret-right"
-                                                aria-hidden="true"
-                                            ></i>
-                                        </Button>
+                                        <Link to={`/about`}>
+                                            <Button
+                                                className="btn-link text-info text-capitalize font-weight-normal"
+                                                color="primary"
+                                                outline
+                                            >
+                                                Read newsletter{" "}
+                                                <i
+                                                    className="fa fa-caret-right"
+                                                    aria-hidden="true"
+                                                ></i>
+                                            </Button>
+                                        </Link>
                                     </Col>
                                 </Row>
                             </Col>
@@ -309,42 +315,33 @@ function HomePage({
                                     Regulation Tracker
                                 </h5>
                                 <ListGroup flush className="mt-4">
-                                    <ListGroupItem
-                                        className="transparent"
-                                        tag="a"
-                                        href="#"
-                                    >
-                                        Advancing knowledge and understanding
-                                        about people management and development
-                                        <br />
-                                        <span className="font-12 float-right font-italic">
-                                            Date: 19/11/2020
-                                        </span>
-                                    </ListGroupItem>
-                                    <ListGroupItem
-                                        className="transparent"
-                                        tag="a"
-                                        href="#"
-                                    >
-                                        Advancing knowledge and understanding
-                                        about people management and development
-                                        <br />
-                                        <span className="font-12 float-right font-italic">
-                                            Date: 19/11/2020
-                                        </span>
-                                    </ListGroupItem>
-                                    <ListGroupItem
-                                        className="transparent"
-                                        tag="a"
-                                        href="#"
-                                    >
-                                        Advancing knowledge and understanding
-                                        about people management and development
-                                        <br />
-                                        <span className="font-12 float-right font-italic">
-                                            Date: 19/11/2020
-                                        </span>
-                                    </ListGroupItem>
+                                    {news
+                                        ? news.map((newItem, index) => {
+                                              if (index < 4) {
+                                                  return (
+                                                      <Link
+                                                          className="regular-tracks"
+                                                          key={index}
+                                                          to={`/news`}
+                                                      >
+                                                          <ListGroupItem className="transparent">
+                                                              <LinesEllipsis
+                                                                  text={
+                                                                      newItem.newsDesc
+                                                                  }
+                                                                  maxLine="2"
+                                                                  ellipsis="...."
+                                                              />
+                                                              <br />
+                                                              <span className="font-12 float-right font-italic">
+                                                                  {newItem.date}
+                                                              </span>
+                                                          </ListGroupItem>
+                                                      </Link>
+                                                  );
+                                              }
+                                          })
+                                        : null}
                                 </ListGroup>
                             </Col>
                         </Row>

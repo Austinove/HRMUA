@@ -225,7 +225,7 @@ section p:first-child, .timer div:last-child span {
     font-size: 17px;
 }
 .bg-img{
-    background-image: url("../img/logo/home-img.jpg");
+    background-image: url("../img/bg-3.jpg");
     min-height: 800px;
     background-attachment: fixed;
     background-position: center;
@@ -233,6 +233,9 @@ section p:first-child, .timer div:last-child span {
     background-size: cover;
     opacity: 0.7;
 
+}
+.aboutus-bg{
+    background-image: url("../img/focus-1.jpg") !important;
 }
 .font-17 {
     font-size: 17px !important;
@@ -356,4 +359,7 @@ form .Knowledge-inputs{
 }
 .track{
     opacity: 0.95 !important;
+}
+.regular-tracks>li>.LinesEllipsis:hover{
+    color: #a96a1f;
 }

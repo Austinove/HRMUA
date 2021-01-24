@@ -16,7 +16,7 @@ class StudentController extends Controller
      */
     public function index()
     {
-        $student = Student::all();
+        $student = Student::orderBy("created_at", "DESC")->get();
         return view('admin.applicants.student')->with('student',$student);
     }
 

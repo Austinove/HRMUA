@@ -24,13 +24,15 @@
                                     </div>
                                 </div>
                                 <div class="mx-auto d-block">
-                                    <div class="email text-sm-left mt-3">
-                                        <div class="location text-sm-left mt-3">
+                                    <div class="location text-sm-left mt-3">
                                         <i class="fa fa-user" aria-hidden="true"></i> <span><strong class="ml-1"> Sex: </strong> {{ $retired->sex }}</span>
                                     </div>
-                                        <i class="fa fa-envelope" aria-hidden="true"></i><span><strong class="ml-1">Email: </strong> {{ $retired->email }}</span></div>
-                                        <div class="text-sm-left mt-3">
-                                        <i class="fa fa-file-archive-o" aria-hidden="true"></i><span><strong class="ml-1">Experience: </strong> {{ $retired->experience }}</span></div>
+                                    <div class="email text-sm-left mt-3">
+                                        <i class="fa fa-envelope" aria-hidden="true"></i><span><strong class="ml-1">Email: </strong> {{ $retired->email }}</span>
+                                    </div>
+                                    <div class="text-sm-left mt-3">
+                                        <i class="fa fa-file-archive-o" aria-hidden="true"></i><span><strong class="ml-1">Experience: </strong> {{ $retired->experience }}</span>
+                                    </div>
                                 </div>
                             </div>
                             <hr/>

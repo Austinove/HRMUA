@@ -18,7 +18,7 @@ class CooperateController extends Controller
     public function index()
     {
         //
-        $cooperate = Corporate::all();
+        $cooperate = Corporate::orderBy("created_at", "DESC")->get();;
         return view('admin.applicants.cooperate', compact('cooperate'));
     }
 
@@ -55,15 +55,15 @@ class CooperateController extends Controller
             'approve' => 1
         ]);
         //sending emails
-        // $to = $cooporate->email;
-        // $message = 'Hello there,';
-        // $message .= '<br/> <strong>HRMUA Application Response</strong>';
-        // $message .= '<br/> This is to Let You know that your application to be a member of HRMUA has been uproved';
-        // $subject = "<strong>HRMUA Application Response</strong>";
-        // $headers  = 'MIME-Version: 1.0' . "\r\n";
-        // $headers .= 'Content-type:text/html;charset=UTF-8' . '\r\n';
-        // $headers .= "from: info@traford.org\r\n";
-        // mail($to, $subject, $message, $headers);
+        $to = $cooporate->email;
+        $message = 'Hello there,';
+        $message .= '<br/> <strong>HRMUA Application Response</strong>';
+        $message .= '<br/> This is to Let You know that your application to be a member of HRMUA has been uproved';
+        $subject = "<strong>HRMUA Application Response</strong>";
+        $headers  = 'MIME-Version: 1.0' . "\r\n";
+        $headers .= 'Content-type:text/html;charset=UTF-8' . '\r\n';
+        $headers .= "from: info@traford.org\r\n";
+        mail($to, $subject, $message, $headers);
         return redirect()->to('cooperates/'.$id);
     }
 
@@ -74,16 +74,16 @@ class CooperateController extends Controller
             'approve' => 2
         ]);
         //sending emails
-        // $to = $cooporate->email;
-        // $message = 'Hello there,';
-        // $message .= '<br/> <strong>HRMUA Application Response</strong>';
-        // $message .= '<br/> This is to Let You know that your application to be a member of HRMUA, is Under Review.';
-        // $message .= '<br/> <strog>We shall let you know shotly about the results</strog>';
-        // $subject = "<strong>HRMUA Application Response</strong>";
-        // $headers  = 'MIME-Version: 1.0' . "\r\n";
-        // $headers .= 'Content-type:text/html;charset=UTF-8' . '\r\n';
-        // $headers .= "from: info@traford.org\r\n";
-        // mail($to, $subject, $message, $headers);
+        $to = $cooporate->email;
+        $message = 'Hello there,';
+        $message .= '<br/> <strong>HRMUA Application Response</strong>';
+        $message .= '<br/> This is to Let You know that your application to be a member of HRMUA, is Under Review.';
+        $message .= '<br/> <strog>We shall let you know shotly about the results</strog>';
+        $subject = "<strong>HRMUA Application Response</strong>";
+        $headers  = 'MIME-Version: 1.0' . "\r\n";
+        $headers .= 'Content-type:text/html;charset=UTF-8' . '\r\n';
+        $headers .= "from: info@traford.org\r\n";
+        mail($to, $subject, $message, $headers);
         return redirect()->to('cooperates/'.$id);
     }
 

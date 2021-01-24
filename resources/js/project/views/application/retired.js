@@ -67,7 +67,7 @@ const Retired = ({ submit_retired, userData, loading, submitError }) => {
           .required("Enter your Telephone"),
         interest: Yup.string()
           .min(2, "Too Short!")
-          .max(50, "Too Long!")
+          .max(200, "Too Long!")
           .required("Enter your Interest"),
         experience: Yup.string().required("Enter your experience"),
         qualification: Yup.string().required("Enter your qualification"),
@@ -75,7 +75,7 @@ const Retired = ({ submit_retired, userData, loading, submitError }) => {
       onSubmit={(values, { setSubmitting, resetForm }) => {
         submit_retired(values);
         resetForm({});
-        setDeclar(false);
+        setDeclar(true);
       }}>
       {({
         values,
@@ -190,8 +190,8 @@ const Retired = ({ submit_retired, userData, loading, submitError }) => {
                     </Label>{" "}
                     <span className="text-danger font-12 ml-2">*</span>
                     <br />
-                    <div className="form-check-radio form-check-inline mt-2">
-                      <Label className="form-check-label">
+                    <FormGroup check>
+                      <Label check>
                         <Input
                           className="reg-inputs"
                           type="radio"
@@ -203,11 +203,8 @@ const Retired = ({ submit_retired, userData, loading, submitError }) => {
                           onBlur={handleBlur}
                         />
                         Male
-                        <span className="form-check-sign"></span>
                       </Label>
-                    </div>
-                    <div className="form-check-radio form-check-inline">
-                      <Label className="form-check-label">
+                      <Label check>
                         <Input
                           className="reg-inputs"
                           type="radio"
@@ -219,9 +216,8 @@ const Retired = ({ submit_retired, userData, loading, submitError }) => {
                           onBlur={handleBlur}
                         />
                         Female
-                        <span className="form-check-sign"></span>
                       </Label>
-                    </div>
+                      </FormGroup>
                   </FormGroup>
                 </Col>
               </Row>

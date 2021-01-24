@@ -140,16 +140,19 @@ const AllEvents = ({
                                                                   }
                                                               </p>
                                                               <span className="text-muted float-right mt-2">
-                                                                  Start on:
-                                                                  {
-                                                                      nextEvent.startdate
-                                                                  }
-                                                              </span>
-                                                              <span className="text-muted float-right mt-2">
-                                                                  Ends on:
-                                                                  {
-                                                                      nextEvent.enddate
-                                                                  }
+                                                                  <span className="mr-1">
+                                                                      Start on:
+                                                                      {
+                                                                          nextEvent.startdate
+                                                                      }{" "}
+                                                                      
+                                                                  </span>|
+                                                                  <span className="ml-1">
+                                                                       Ends on:
+                                                                      {
+                                                                          nextEvent.endate
+                                                                      }
+                                                                  </span>
                                                               </span>
                                                           </Media>
                                                       </Media>

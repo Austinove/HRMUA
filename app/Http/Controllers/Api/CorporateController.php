@@ -81,8 +81,7 @@ class CorporateController extends Controller
             'sector'=>$request->sector,
             'noOfstaff'=>$request->staffNumber,
             'interest'=>$request->interest,
-            'contactPerson' => $request->contactPerson,
-            'approved' => 0
+            'contactPerson' => $request->contactPerson
         ]);
         //saving corporate staff members
         foreach ($request->staffMembers as $staff) {

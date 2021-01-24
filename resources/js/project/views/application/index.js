@@ -50,7 +50,7 @@ const Application = () => {
                                         </span>
                                         <br />
                                         <FormGroup check>
-                                            <Label check>
+                                            <Label check className="mr-3">
                                                 <Input
                                                     type="radio"
                                                     name="memberRadio"
@@ -58,8 +58,8 @@ const Application = () => {
                                                     onChange={memberChange}
                                                 />
                                                 Professional Member
-                                            </Label>
-                                            <Label check>
+                                            </Label>|
+                                            <Label check className="mr-3">
                                                 <Input
                                                     type="radio"
                                                     name="memberRadio"
@@ -67,8 +67,8 @@ const Application = () => {
                                                     onChange={memberChange}
                                                 />
                                                 Student Member
-                                            </Label>
-                                            <Label check>
+                                            </Label>|
+                                            <Label check className="mr-3">
                                                 <Input
                                                     type="radio"
                                                     name="memberRadio"
@@ -76,8 +76,8 @@ const Application = () => {
                                                     onChange={memberChange}
                                                 />
                                                 Retired Member
-                                            </Label>
-                                            <Label check>
+                                            </Label>|
+                                            <Label check className="mr-3">
                                                 <Input
                                                     type="radio"
                                                     name="memberRadio"

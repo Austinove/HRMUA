@@ -16,7 +16,7 @@ class ProfessionalController extends Controller
     public function index()
     {
         //
-        $proffessionals = Professional::all();
+        $proffessionals = Professional::orderBy("created_at", "DESC")->get();
         return view('admin.applicants.professional')->with('proffessionals', $proffessionals);
     }
 

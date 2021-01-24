@@ -16,7 +16,7 @@ class RetiredController extends Controller
     public function index()
     {
         //
-        $retired = Retired::all();
+        $retired = Retired::orderBy("created_at", "DESC")->get();
         return view('admin.applicants.retired')->with('retired',$retired);
     }
 
