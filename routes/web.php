@@ -42,11 +42,17 @@ professionals
 */
 Route::get('/professional', 'applicatns\ProfessionalController@index');
 Route::get('/professional/{id}', 'applicatns\ProfessionalController@singlePro');
+Route::get('/approve/professional/{id}', 'applicatns\ProfessionalController@approve');
+Route::get('/review/professional/{id}', 'applicatns\ProfessionalController@underReview');
+Route::get('/decline/professional/{id}', 'applicatns\ProfessionalController@decline');
 /*
 Cooperates
 */
 Route::get('/cooperates', 'applicatns\CooperateController@index');
 Route::get('/cooperates/{id}', 'applicatns\CooperateController@singleCoporate');
+Route::get('/approve/cooperate/{id}', 'applicatns\CooperateController@approve');
+Route::get('/review/cooperate/{id}', 'applicatns\CooperateController@underReview');
+Route::get('/decline/cooperate/{id}', 'applicatns\CooperateController@decline');
 /*
 Student
 */
@@ -62,6 +68,9 @@ Retired
 */
 Route::get('/retired', 'applicatns\RetiredController@index');
 Route::get('/retired/{id}', 'applicatns\RetiredController@singleRetired');
+Route::get('/approve/retired/{id}', 'applicatns\RetiredController@approve');
+Route::get('/review/retired/{id}', 'applicatns\RetiredController@underReview');
+Route::get('/decline/retired/{id}', 'applicatns\RetiredController@decline');
 /*
 MemberType
 */

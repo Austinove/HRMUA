@@ -100,7 +100,15 @@
                                         <div class="card-text text-sm-left">
                                             <span>
                                                 <strong>Status</strong>
+                                                @if ($cooperate['approve'] == 1)
                                                 <span class="badge badge-success badge-pill">Approved</span>
+                                                @elseif ($cooperate['approve'] == 3)
+                                                    <span class="badge badge-danger badge-pill">Declined</span>
+                                                @elseif($cooperate['approve'] == 2)
+                                                    <span class="badge badge-primary badge-pill">Under Review</span>
+                                                @else
+                                                <span class="badge badge-info badge-pill">Pending..</span>
+                                                @endif
                                             </span>
                                             
                                         </div>
@@ -109,17 +117,23 @@
                             </div>
                             <hr/>
                             <div class="container">
-                                <div class="row d-flex">
-                                    <div class="col-md-4 col-sm-6">
-                                        <a class="mt-2 btn btn-sm btn-outline-success" href="#" role="button"><i class="fa fa-check" aria-hidden="true"></i> Approve Applicaion</a>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6">
-                                        <a class="mt-2 btn btn-sm btn-outline-primary" href="#" role="button"><i class="fa fa-minus-circle" aria-hidden="true"></i> Under Review</a>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6">
-                                        <a class="mt-2 btn btn-sm btn-outline-danger" href="#" role="button"><i class="fa fa-times-circle" aria-hidden="true"></i> Decline Applicaion</a>
-                                    </div>
-                                </div>
+                                @if ($cooperate['approve'] != 1)
+                                    @if ($cooperate['approve'] != 3)
+                                        <div class="row d-flex">
+                                            <div class="col-md-4 col-sm-6">
+                                                <a class="mt-2 btn btn-sm btn-outline-success" href="/approve/cooperate/{{ $cooperate['id'] }}" role="button"><i class="fa fa-check" aria-hidden="true"></i> Approve Applicaion</a>
+                                            </div>
+                                            @if ($cooperate['approve'] != 2)
+                                                <div class="col-md-4 col-sm-6">
+                                                    <a class="mt-2 btn btn-sm btn-outline-primary" href="/review/cooperate/{{ $cooperate['id'] }}" role="button"><i class="fa fa-minus-circle" aria-hidden="true"></i> Under Review</a>
+                                                </div>
+                                            @endif
+                                            <div class="col-md-4 col-sm-6">
+                                                <a class="mt-2 btn btn-sm btn-outline-danger" href="/decline/cooperate/{{ $cooperate['id'] }}" role="button"><i class="fa fa-times-circle" aria-hidden="true"></i> Decline Applicaion</a>
+                                            </div>
+                                        </div>
+                                    @endif
+                                @endif
                             </div>
                         </div>
                     </div>

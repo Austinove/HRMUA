@@ -28,13 +28,14 @@
                             <tbody>
                                 @if (count($retired)>0)    
                                     @foreach ($retired as $item)
-                                        <tr>
-                                            <td>{{$item->surname." ".$item->otherNames}}</td>
-                                            <td>{{$item->telephone}}</td>
-                                            <td>{{$item->email}}</td>
-                                            {{-- <td><label class="badge badge-danger badge-pill">{{$item->approve}}</label></td> --}}
-                                            <td><a class="mt-2 btn btn-sm btn-outline-primary" href="/retired/{{ $item->id }}" role="button"> Details...</a></td>
-                                        </tr>
+                                        @if ($item->approve == 0 || $item->approve == null)
+                                            <tr>
+                                                <td>{{$item->surname." ".$item->otherNames}}</td>
+                                                <td>{{$item->telephone}}</td>
+                                                <td>{{$item->email}}</td>
+                                                <td><a class="mt-2 btn btn-sm btn-outline-primary" href="/retired/{{ $item->id }}" role="button"> Details...</a></td>
+                                            </tr>
+                                        @endif
                                     @endforeach       
                                 @endif
                             </tbody>
@@ -56,13 +57,14 @@
                             <tbody>
                                 @if (count($retired)>0)    
                                     @foreach ($retired as $item)
-                                        <tr>
-                                            <td>{{$item->surname." ".$item->otherNames}}</td>
-                                            <td>{{$item->telephone}}</td>
-                                            <td>{{$item->email}}</td>
-                                            {{-- <td><label class="badge badge-danger badge-pill">{{$item->approve}}</label></td> --}}
-                                            <td><a class="mt-2 btn btn-sm btn-outline-primary" href="/retired/{{ $item->id }}" role="button"> Details...</a></td>
-                                        </tr>
+                                        @if ($item->approve == 2)
+                                            <tr>
+                                                <td>{{$item->surname." ".$item->otherNames}}</td>
+                                                <td>{{$item->telephone}}</td>
+                                                <td>{{$item->email}}</td>
+                                                <td><a class="mt-2 btn btn-sm btn-outline-primary" href="/retired/{{ $item->id }}" role="button"> Details...</a></td>
+                                            </tr>
+                                        @endif
                                     @endforeach       
                                 @endif
                             </tbody>
@@ -84,13 +86,14 @@
                             <tbody>
                                 @if (count($retired)>0)    
                                     @foreach ($retired as $item)
-                                        <tr>
-                                            <td>{{$item->surname." ".$item->otherNames}}</td>
-                                            <td>{{$item->telephone}}</td>
-                                            <td>{{$item->email}}</td>
-                                            {{-- <td><label class="badge badge-danger badge-pill">{{$item->approve}}</label></td> --}}
-                                            <td><a class="mt-2 btn btn-sm btn-outline-primary" href="/retired/{{ $item->id }}" role="button"> Details...</a></td>
-                                        </tr>
+                                        @if ($item->approve == 1)
+                                            <tr>
+                                                <td>{{$item->surname." ".$item->otherNames}}</td>
+                                                <td>{{$item->telephone}}</td>
+                                                <td>{{$item->email}}</td>
+                                                <td><a class="mt-2 btn btn-sm btn-outline-primary" href="/retired/{{ $item->id }}" role="button"> Details...</a></td>
+                                            </tr>
+                                        @endif
                                     @endforeach       
                                 @endif
                             </tbody>
@@ -99,7 +102,6 @@
                 </div>
             </div>
         </div>
-        <!--/Striped table-->
     </div>
 </div>
 @endsection

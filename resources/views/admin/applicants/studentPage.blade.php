@@ -113,27 +113,28 @@
                                                 <span class="badge badge-info badge-pill">Pending..</span>
                                                 @endif
                                             </span>
-                                            
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <hr/>
                             <div class="container">
-                                @if ($student->approve != 1 || $student->approve != 3)
-                                    <div class="row d-flex">
-                                        <div class="col-md-4 col-sm-6">
-                                            <a class="mt-2 btn btn-sm btn-outline-success" href="/approve/student/{{ $student->id }}" role="button"><i class="fa fa-check" aria-hidden="true"></i> Approve Applicaion</a>
-                                        </div>
-                                        @if ($student->approve != 2)
+                                @if ($student->approve != 1)
+                                    @if ($student->approve != 3)
+                                        <div class="row d-flex">
                                             <div class="col-md-4 col-sm-6">
-                                                <a class="mt-2 btn btn-sm btn-outline-primary" href="/review/student/{{ $student->id }}" role="button"><i class="fa fa-minus-circle" aria-hidden="true"></i> Under Review</a>
+                                                <a class="mt-2 btn btn-sm btn-outline-success" href="/approve/student/{{ $student->id }}" role="button"><i class="fa fa-check" aria-hidden="true"></i> Approve Applicaion</a>
                                             </div>
-                                        @endif
-                                        <div class="col-md-4 col-sm-6">
-                                            <a class="mt-2 btn btn-sm btn-outline-danger" href="/decline/student/{{ $student->id }}" role="button"><i class="fa fa-times-circle" aria-hidden="true"></i> Decline Applicaion</a>
+                                            @if ($student->approve != 2)
+                                                <div class="col-md-4 col-sm-6">
+                                                    <a class="mt-2 btn btn-sm btn-outline-primary" href="/review/student/{{ $student->id }}" role="button"><i class="fa fa-minus-circle" aria-hidden="true"></i> Under Review</a>
+                                                </div>
+                                            @endif
+                                            <div class="col-md-4 col-sm-6">
+                                                <a class="mt-2 btn btn-sm btn-outline-danger" href="/decline/student/{{ $student->id }}" role="button"><i class="fa fa-times-circle" aria-hidden="true"></i> Decline Applicaion</a>
+                                            </div>
                                         </div>
-                                    </div>
+                                    @endif
                                 @endif
                             </div>
                         </div>

@@ -46,6 +46,69 @@ class CooperateController extends Controller
         return view("admin.applicants.cooperatePage")->with("cooperate", $cooperate);
     }
 
+
+    
+    public function approve($id)
+    {
+        $cooporate = Corporate::find($id);
+        Corporate::find($id)->update([
+            'approve' => 1
+        ]);
+        //sending emails
+        // $to = $cooporate->email;
+        // $message = 'Hello there,';
+        // $message .= '<br/> <strong>HRMUA Application Response</strong>';
+        // $message .= '<br/> This is to Let You know that your application to be a member of HRMUA has been uproved';
+        // $subject = "<strong>HRMUA Application Response</strong>";
+        // $headers  = 'MIME-Version: 1.0' . "\r\n";
+        // $headers .= 'Content-type:text/html;charset=UTF-8' . '\r\n';
+        // $headers .= "from: info@traford.org\r\n";
+        // mail($to, $subject, $message, $headers);
+        return redirect()->to('cooperates/'.$id);
+    }
+
+    public function underReview($id)
+    {
+        $cooporate = Corporate::find($id);
+        Corporate::find($id)->update([
+            'approve' => 2
+        ]);
+        //sending emails
+        // $to = $cooporate->email;
+        // $message = 'Hello there,';
+        // $message .= '<br/> <strong>HRMUA Application Response</strong>';
+        // $message .= '<br/> This is to Let You know that your application to be a member of HRMUA, is Under Review.';
+        // $message .= '<br/> <strog>We shall let you know shotly about the results</strog>';
+        // $subject = "<strong>HRMUA Application Response</strong>";
+        // $headers  = 'MIME-Version: 1.0' . "\r\n";
+        // $headers .= 'Content-type:text/html;charset=UTF-8' . '\r\n';
+        // $headers .= "from: info@traford.org\r\n";
+        // mail($to, $subject, $message, $headers);
+        return redirect()->to('cooperates/'.$id);
+    }
+
+    public function decline($id)
+    {
+        $cooporate = Corporate::find($id);
+        Corporate::find($id)->update([
+            'approve' => 3
+        ]);
+        // //sending emails
+        $to = $cooporate->email;
+        $message = 'Hello there,';
+        $message .= '<br/> <strong>HRMUA Application Response</strong>';
+        $message .= '<br/> This is to Let You know that your application to be a member of HRMUA, is Declined.';
+        $message .= '<br/> <strog>Try Again Please...</strog>';
+        $subject = "<strong>HRMUA Application Response</strong>";
+        $headers  = 'MIME-Version: 1.0' . "\r\n";
+        $headers .= 'Content-type:text/html;charset=UTF-8' . '\r\n';
+        $headers .= "from: info@traford.org\r\n";
+        mail($to, $subject, $message, $headers);
+        return redirect()->to('cooperates/'.$id);
+    }
+
+
+
     /**
      * Show the form for creating a new resource.
      *

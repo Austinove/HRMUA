@@ -29,15 +29,17 @@
                             <tbody>
                                 @if(count($cooperate)>0)
                                     @foreach ($cooperate as $item)
-                                    <tr>
-                                        <td>{{$item->orgName}}</td>
-                                        <td>{{$item->title}}</td>
-                                        <td>{{$item->email}}</td>
-                                        <td>{{$item->created_at}}</td>
-                                        <td><a class="mt-2 btn btn-sm btn-outline-primary" href="/cooperates/{{ $item->id }}" role="button"> Details...</a></td>
-                                    </tr>
+                                        @if($item->approve == 1 || $item->approve == null)
+                                            <tr>
+                                                <td>{{$item->orgName}}</td>
+                                                <td>{{$item->title}}</td>
+                                                <td>{{$item->email}}</td>
+                                                <td>{{$item->created_at}}</td>
+                                                <td><a class="mt-2 btn btn-sm btn-outline-primary" href="/cooperates/{{ $item->id }}" role="button"> Details...</a></td>
+                                            </tr>
+                                        @endif
                                     @endforeach
-                                @endif()
+                                @endif
 
                             </tbody>
                         
@@ -60,15 +62,17 @@
                             <tbody>
                                 @if(count($cooperate)>0)
                                     @foreach ($cooperate as $item)
-                                    <tr>
-                                        <td>{{$item->orgName}}</td>
-                                        <td>{{$item->title}}</td>
-                                        <td>{{$item->email}}</td>
-                                        <td>{{$item->created_at}}</td>
-                                        <td><a class="mt-2 btn btn-sm btn-outline-primary" href="/cooperates/{{ $item->id }}" role="button"> Details...</a></td>
-                                    </tr>
+                                        @if($item->approve == 2)
+                                            <tr>
+                                                <td>{{$item->orgName}}</td>
+                                                <td>{{$item->title}}</td>
+                                                <td>{{$item->email}}</td>
+                                                <td>{{$item->created_at}}</td>
+                                                <td><a class="mt-2 btn btn-sm btn-outline-primary" href="/cooperates/{{ $item->id }}" role="button"> Details...</a></td>
+                                            </tr>
+                                        @endif
                                     @endforeach
-                                @endif()
+                                @endif
 
                             </tbody>
                         
@@ -91,15 +95,17 @@
                             <tbody>
                                 @if(count($cooperate)>0)
                                     @foreach ($cooperate as $item)
-                                    <tr>
-                                        <td>{{$item->orgName}}</td>
-                                        <td>{{$item->title}}</td>
-                                        <td>{{$item->email}}</td>
-                                        <td>{{$item->created_at}}</td>
-                                        <td><a class="mt-2 btn btn-sm btn-outline-primary" href="/cooperates/{{ $item->id }}" role="button"> Details...</a></td>
-                                    </tr>
+                                        @if($item->approve == 1)
+                                            <tr>
+                                                <td>{{$item->orgName}}</td>
+                                                <td>{{$item->title}}</td>
+                                                <td>{{$item->email}}</td>
+                                                <td>{{$item->created_at}}</td>
+                                                <td><a class="mt-2 btn btn-sm btn-outline-primary" href="/cooperates/{{ $item->id }}" role="button"> Details...</a></td>
+                                            </tr>
+                                        @endif
                                     @endforeach
-                                @endif()
+                                @endif
                             </tbody>
                         </table>
                     </div>
