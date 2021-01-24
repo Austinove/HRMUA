@@ -9,6 +9,15 @@ use App\Knowledgehub;
 class KnowHubController extends Controller
 {
     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -60,6 +69,25 @@ class KnowHubController extends Controller
         return redirect('/knowHub')->with('success','Item Added');
     }
 
+    public function edit(Request $request,$id)
+    {
+        $inputs = $request->all();
+        $this->validate($request, [
+            'document' => 'required|file|mimes:doc,docx,,xlsx,xls,pdf,',
+        ]);
+        $knowhub = Knowledgehub::find($id);
+        $knowhub ->title=$request->input('title');
+        $knowhub ->description=$request->input('description');
+        if($request->hasFile('document')) {
+            $document = $request->file('document');
+            $filename = $document->getClientOriginalName();
+            $document->move(public_path('uploads/document'), $filename);
+            $user->document = $request->file('document')->getClientOriginalName();
+        }
+        $knowhub ->update();
+        return redirect('/knowHub')->with('success','Document updated');
+    }
+
     /**
      * Display the specified resource.
      *
@@ -71,16 +99,7 @@ class KnowHubController extends Controller
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
+   
 
     /**
      * Update the specified resource in storage.
@@ -102,6 +121,8 @@ class KnowHubController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $knowhub = Knowledgehub::find($id);
+        $knowhub->delete();
+        return redirect('/knowHub')->with('success','Document delete! ');
     }
 }

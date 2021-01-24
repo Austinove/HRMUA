@@ -11,6 +11,15 @@ use Auth;
 class UserController extends Controller
 {
     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -34,8 +43,14 @@ class UserController extends Controller
         $user ->fname=$request->input('fname');
         $user ->lname=$request->input('lname');
         $user ->email=$request->input('email');
+        if($request->hasFile('image')) {
+            $image = $request->file('image');
+            $filename = $image->getClientOriginalName();
+            $image->move(public_path('uploads/user'), $filename);
+            $user->image = $request->file('image')->getClientOriginalName();
+        }
         $user ->update();
-        return back()->with('success','Accouint Updated!');
+        return redirect('/userprofile')->with('success','Accouint Updated!');
 
     }
     public function updatepassword(Request $request)

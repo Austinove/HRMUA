@@ -45,7 +45,7 @@
             </a>
             <ul class="list-unstyled navbar__sub-list js-sub-list">
                 <li>
-                    <a href="/admin-news">News</a>
+                    <a href="/news">News</a>
                 </li>
                 <li>
                     <a href="/events">Events</a>
@@ -53,9 +53,12 @@
                 <li>
                     <a href="/leadership">Leadership</a>
                 </li>
+                <li>
+                    <a href="/home-image">Home screen Images</a>
+                </li>
             </ul>
         </li>
-        <li class="has-sub">
+        {{-- <li class="has-sub">
             <a class="js-arrow" href="#">
                 <i class="fas fa-desktop"></i>Account Settings
                 <span class="arrow">
@@ -73,6 +76,6 @@
                     <a href="/change/password">Change Password</a>
                 </li>
             </ul>
-        </li>
+        </li> --}}
     </ul>
 </nav>

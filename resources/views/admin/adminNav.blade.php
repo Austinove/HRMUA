@@ -39,33 +39,29 @@
                 <div class="account-wrap">
                     <div class="account-item account-item--style2 clearfix js-item-menu">
                         <div class="image">
-                            <img src="/images/icon/avatar-01.jpg" alt="John Doe" />
+                            <img src="{{ asset('uploads/user/'.Auth::User()->image)}}" alt="{{Auth::User()->fname." ".Auth::User()->lname}}" />
                         </div>
                         <div class="content">
-                            <a class="js-acc-btn" href="#">john doe</a>
+                            <a class="js-acc-btn" href="#">{{Auth::User()->fname." ".Auth::User()->lname}}</a>
                         </div>
                         <div class="account-dropdown js-dropdown">
                             <div class="info clearfix">
                                 <div class="image">
                                     <a href="#">
-                                        <img src="/images/icon/avatar-01.jpg" alt="John Doe" />
+                                        <img src="{{ asset('uploads/user/'.Auth::User()->image)}}" alt="{{Auth::User()->fname." ".Auth::User()->lname}}" />
                                     </a>
                                 </div>
                                 <div class="content">
                                     <h5 class="name">
-                                        <a href="#">john doe</a>
+                                        <a href="#">{{Auth::User()->fname." ".Auth::User()->lname}}</a>
                                     </h5>
-                                    <span class="email">johndoe@example.com</span>
+                                    <span class="email">{{Auth::User()->email}}</span>
                                 </div>
                             </div>
                             <div class="account-dropdown__body">
                                 <div class="account-dropdown__item">
-                                    <a href="#">
+                                    <a href="/userprofile">
                                         <i class="zmdi zmdi-account"></i>Account</a>
-                                </div>
-                                <div class="account-dropdown__item">
-                                    <a href="/memberType">
-                                        <i class="zmdi zmdi-settings"></i>Setting</a>
                                 </div>
                             </div>
                             <div class="account-dropdown__footer">

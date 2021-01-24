@@ -9,6 +9,15 @@ use App\MemberType;
 class MemberTypeController extends Controller
 {
     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -67,11 +76,13 @@ class MemberTypeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Request $request,$id)
     {
-        //
+        $memberType = MemberType::find($id);
+        $memberType ->typeName=$request->input('typeName');
+        $memberType ->update();
+        return redirect('/memberType')->with('success','Member Type Updated');
     }
-
     /**
      * Update the specified resource in storage.
      *
@@ -92,6 +103,8 @@ class MemberTypeController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $memberType = MemberType::find($id);
+        $memberType->delete();
+        return redirect('/memberType')->with('success','Member delete! ');
     }
 }
