@@ -10,12 +10,14 @@
         <!--User profile header-->
         <div class="mt-1 mb-3 button-container bg-white border shadow-sm">
             <div class="profile-bg p-5">
-                <img src="{{ asset('uploads/user/'.Auth::User()->image)}}" height="125px" width="125px" class="rounded-circle shadow profile-img" />
+                <img src="/images/icon/avatar-01.jpg" alt="John Doe" height="125px" width="125px" class="rounded-circle shadow profile-img" />
+                {{-- <img src="{{ asset('uploads/user/'.Auth::User()->image)}}" height="125px" width="125px" class="rounded-circle shadow profile-img" /> --}}
             </div>
             <div class="profile-bio-main container-fluid">
                 <div class="row">
                     <div class="col-md-5 offset-md-3 col-sm-12 offset-sm-0 col-12 bio-header">
-                        <h3 class="mt-4">{{Auth::User()->fname." ".Auth::User()->lname}}</h3>
+                        {{-- <h3 class="mt-4">{{Auth::User()->fname." ".Auth::User()->lname}}</h3> --}}
+                        <h3 class="mt-4">Bryan</h3>
                         <span class="text-muted mt-0 bio-request">System Administrator</span>
                     </div>
                 </div>
@@ -33,16 +35,20 @@
                 {{ csrf_field() }}
                 <legend>Account Profile</legend>
                 <div class="form-group " >
-                    <input type="text" class="form-control" name="fname"  value="{{Auth::User()->fname}}">
+                    {{-- <input type="text" class="form-control" name="fname"  value="{{Auth::User()->fname}}"> --}}
+                    <input type="text" class="form-control" name="fname"  value="Bryan">
                 </div>
                 <div class="form-group " >
-                    <input type="text" class="form-control" name="lname"  value="{{Auth::User()->lname}}">
+                    {{-- <input type="text" class="form-control" name="lname"  value="{{Auth::User()->lname}}"> --}}
+                    <input type="text" class="form-control" name="lname"  value="Austin">
                 </div>
                 <div class="form-group" >
                     <input type="text" class="form-control" name="email"  value="{{Auth::User()->email}}">
+                    <input type="text" class="form-control" name="email"  value="bryanovicaustenove@gmail.com">
                 </div>
                 <div class="form-group" >
-                    <img src="{{ asset('uploads/user/'.Auth::User()->image)}}" width="60" alt=" Image" >
+                    <img src="/images/icon/avatar-01.jpg" alt="John Doe" width="60px" />
+                    {{-- <img src="{{ asset('uploads/user/'.Auth::User()->image)}}" width="60" alt=" Image" > --}}
                     <br></br>
                     <input type="file" name="image" class="form-control-file ">
                 </div>

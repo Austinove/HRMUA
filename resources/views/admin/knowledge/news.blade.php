@@ -47,7 +47,7 @@
                                     <td class="align-middle">{{$item->newsTitle}}</td>
                                     <td class="align-middle">{{$item->newsCategory}}</td>
                                     <td class="align-middle">{{$item->newsDesc}}</td>
-                                    <td class="align-middle"><img src="{{ asset('uploads/news/'.$item ->image)}}" width="60px" alt="Image"></td>
+                                    <td class="align-middle"><img src="{{ asset('/uploads/news/'.$item ->image)}}" width="60px" alt="Image"></td>
                                     <td >
                                         <div class="table-data-feature">
                                             <a href="#" class="item" data-toggle="modal" data-placement="top" data-target='#newsUpdate{{ $item->id }}' title="Edit">
