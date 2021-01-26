@@ -1,14 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\applicatns;
+namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Corporate;
-use App\Professional;
-use App\Staff;
+use App\Student;
+use Response;
 
-class CooperateController extends Controller
+class StudentController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -26,45 +25,18 @@ class CooperateController extends Controller
      */
     public function index()
     {
-        //
-        $cooperate = Corporate::orderBy("created_at", "DESC")->get();;
-        return view('admin.applicants.cooperate', compact('cooperate'));
+        $student = Student::orderBy("created_at", "DESC")->get();
+        return view('admin.applicants.student')->with('student',$student);
     }
 
-    public function singleCoporate($id){
-        $cooperates = Corporate::find($id);
-        $staffMembers = Staff::where("coporate_id", $id)->get();
-        $cooperate = [
-            "id" => $cooperates->id,
-            "orgName" => $cooperates->orgName,
-            "postalAddress" => $cooperates->postalAddress,
-            "telephone" => $cooperates->telephone,
-            "fax" => $cooperates->fax,
-            "email" => $cooperates->email,
-            "contactPerson" => $cooperates->contactPerson,
-            "title" => $cooperates->title,
-            "sector" => $cooperates->sector,
-            "noOfstaff" => $cooperates->noOfstaff,
-            "interest" => $cooperates->interest,
-            "approve" => $cooperates->approve,
-            "dapproved" => $cooperates->dapproved,
-            "doApp" => $cooperates->doApp,
-            "created_at" => $cooperates->created_at,
-            "staff" => $staffMembers
-        ];
-        return view("admin.applicants.cooperatePage")->with("cooperate", $cooperate);
-    }
-
-
-    
     public function approve($id)
     {
-        $cooporate = Corporate::find($id);
-        Corporate::find($id)->update([
+        $student = Student::find($id);
+        Student::find($id)->update([
             'approve' => 1
         ]);
         //sending emails
-        $to = $cooporate->email;
+        $to = $student->email;
         $message = 'Hello there,';
         $message .= '<br/> <strong>HRMUA Application Response</strong>';
         $message .= '<br/> This is to Let You know that your application to be a member of HRMUA has been uproved';
@@ -73,17 +45,17 @@ class CooperateController extends Controller
         $headers .= 'Content-type:text/html;charset=UTF-8' . '\r\n';
         $headers .= "from: info@traford.org\r\n";
         mail($to, $subject, $message, $headers);
-        return redirect()->to('cooperates/'.$id);
+        return redirect()->to('student/'.$id);
     }
 
     public function underReview($id)
     {
-        $cooporate = Corporate::find($id);
-        Corporate::find($id)->update([
+        $student = Student::find($id);
+        Student::find($id)->update([
             'approve' => 2
         ]);
         //sending emails
-        $to = $cooporate->email;
+        $to = $student->email;
         $message = 'Hello there,';
         $message .= '<br/> <strong>HRMUA Application Response</strong>';
         $message .= '<br/> This is to Let You know that your application to be a member of HRMUA, is Under Review.';
@@ -93,17 +65,17 @@ class CooperateController extends Controller
         $headers .= 'Content-type:text/html;charset=UTF-8' . '\r\n';
         $headers .= "from: info@traford.org\r\n";
         mail($to, $subject, $message, $headers);
-        return redirect()->to('cooperates/'.$id);
+        return redirect()->to('student/'.$id);
     }
 
     public function decline($id)
     {
-        $cooporate = Corporate::find($id);
-        Corporate::find($id)->update([
+        $student = Student::find($id);
+        Student::find($id)->update([
             'approve' => 3
         ]);
         // //sending emails
-        $to = $cooporate->email;
+        $to = $student->email;
         $message = 'Hello there,';
         $message .= '<br/> <strong>HRMUA Application Response</strong>';
         $message .= '<br/> This is to Let You know that your application to be a member of HRMUA, is Declined.';
@@ -113,10 +85,32 @@ class CooperateController extends Controller
         $headers .= 'Content-type:text/html;charset=UTF-8' . '\r\n';
         $headers .= "from: info@traford.org\r\n";
         mail($to, $subject, $message, $headers);
-        return redirect()->to('cooperates/'.$id);
+        return redirect()->to('student/'.$id);
     }
 
+    public function singleStudent($id)
+    {
+        $student = Student::find($id);
+        return view("admin.applicants.studentPage")->with("student", $student);
+    }
+    //view file
+    public function viewFile($fileName)
+    {
+        $pathName = 'students/'.$fileName;
+        return Response::make(file_get_contents(public_path().'/'.$pathName), 200, [
+            'Content-Type' => 'application/pdf',
+            'Content-Disposition' => 'inline; filename='
+        ]);
+    }
 
+    //image file
+    public function viewImage($fileName){
+        $pathName = 'students/'.$fileName;
+        return Response::make(file_get_contents(public_path().'/'.$pathName), 200, [
+            'Content-Type' => 'image',
+            'Content-Disposition' => 'inline; filename='
+        ]);
+    }
 
     /**
      * Show the form for creating a new resource.

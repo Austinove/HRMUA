@@ -83,34 +83,34 @@ Route::get('/decline/retired/{id}', 'applicatns\RetiredController@decline');
 /*
 MemberType
 */
-Route::get('/memberType', 'others\MemberTypeController@index');
-Route::post('/post-membertype', 'others\MemberTypeController@store');
-Route::put('/edit-member-Type/{id}', 'others\MemberTypeController@edit');
-Route::get('/delete-type/{id}', 'others\MemberTypeController@destroy');
+Route::get('/memberType', 'MemberTypeController@index');
+Route::post('/post-membertype', 'MemberTypeController@store');
+Route::put('/edit-member-Type/{id}', 'MemberTypeController@edit');
+Route::get('/delete-type/{id}', 'MemberTypeController@destroy');
 /*
 Knowledge Hub
 */
-Route::get('/knowHub', 'others\KnowHubController@index');
-Route::post('/post-knowHub', 'others\KnowHubController@store');
-Route::put('/edit-knowHub/{id}', 'others\KnowHubController@edit');
-Route::get('/delete-knowhub/{id}', 'others\KnowHubController@destroy');
+Route::get('/knowHub', 'KnowHubController@index');
+Route::post('/post-knowHub', 'KnowHubController@store');
+Route::put('/edit-knowHub/{id}', 'KnowHubController@edit');
+Route::get('/delete-knowhub/{id}', 'KnowHubController@destroy');
 /*
 News,Events and updates
 */
-Route::get('/news', 'others\NewsUpdateController@newsupdates');
-Route::post('/post-news', 'others\NewsUpdateController@storeNews');
-Route::put('/edit-news/{id}', 'others\NewsUpdateController@editNews');
-Route::get('/delete-news/{id}', 'others\NewsUpdateController@destroyNews');
+Route::get('/news', 'NewsUpdateController@newsupdates');
+Route::post('/post-news', 'NewsUpdateController@storeNews');
+Route::put('/edit-news/{id}', 'NewsUpdateController@editNews');
+Route::get('/delete-news/{id}', 'NewsUpdateController@destroyNews');
 
-Route::get('/events', 'others\NewsUpdateController@events');
-Route::post('/post-event', 'others\NewsUpdateController@storeEvents');
-Route::put('/edit-event/{id}', 'others\NewsUpdateController@editEvent');
-Route::get('/delete-event/{id}', 'others\NewsUpdateController@destroyEvent');
+Route::get('/events', 'NewsUpdateController@events');
+Route::post('/post-event', 'NewsUpdateController@storeEvents');
+Route::put('/edit-event/{id}', 'NewsUpdateController@editEvent');
+Route::get('/delete-event/{id}', 'NewsUpdateController@destroyEvent');
 
-Route::get('/leadership', 'others\NewsUpdateController@leadership');
-Route::post('/post-leader', 'others\NewsUpdateController@storeLeader');
-Route::put('/edit-post-leader/{id}', 'others\NewsUpdateController@editleader');
-Route::get('/delete-leader/{id}', 'others\NewsUpdateController@destroyLeader');
+Route::get('/leadership', 'NewsUpdateController@leadership');
+Route::post('/post-leader', 'NewsUpdateController@storeLeader');
+Route::put('/edit-post-leader/{id}', 'NewsUpdateController@editleader');
+Route::get('/delete-leader/{id}', 'NewsUpdateController@destroyLeader');
 
 Route::get('/{any}', function(){
         return view('welcome');
