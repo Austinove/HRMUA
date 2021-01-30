@@ -82,7 +82,7 @@ class KnowHubController extends Controller
             $document = $request->file('document');
             $filename = $document->getClientOriginalName();
             $document->move(public_path('uploads/document'), $filename);
-            $user->document = $request->file('document')->getClientOriginalName();
+            $knowhub->document = $request->file('document')->getClientOriginalName();
         }
         $knowhub ->update();
         return redirect('/knowHub')->with('success','Document updated');

@@ -31,9 +31,9 @@
                 <li>
                     <a href="/student">Students</a>
                 </li>
-                <li>
+                {{-- <li>
                     <a href="/retired">Retired</a>
-                </li>
+                </li> --}}
             </ul>
         </li>
         <li class="has-sub">
