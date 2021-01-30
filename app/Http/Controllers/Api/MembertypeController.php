@@ -11,8 +11,12 @@ use Illuminate\Http\Request;
 class MembertypeController extends Controller
 {
    
-   
-    /**
+   /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+      /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response

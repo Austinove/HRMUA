@@ -10,7 +10,11 @@ use App\Event;
 
 class EventController extends Controller
 {
-    
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
     /**
      * Display a listing of the resource.
      *
@@ -27,7 +31,7 @@ class EventController extends Controller
 
     public function currentEvents()
     {
-        $events = Event::where("startdate",">=", now())->orderBy("startdate", "ASC")->get();
+        $events = Event::orderBy("startdate", "ASC")->get();
         return response()->json($events, 200);
     }
 

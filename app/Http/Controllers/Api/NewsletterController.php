@@ -10,7 +10,11 @@ use Illuminate\Http\Request;
 
 class NewsletterController extends Controller
 {
-    
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
     /**
      * Display a listing of the resource.
      *
@@ -26,6 +30,7 @@ class NewsletterController extends Controller
                 "newsTitle" => $value->newsTitle,
                 "newsCategory" => $value->newsCategory,
                 "newsDesc" => $value->newsDesc,
+                "image" => $value->image,
                 "date" => date("d-m-yy", strtotime($value->created_at))."(".$value->created_at->diffForHumans().")"
             ];
             array_push($news, $row);

@@ -9,7 +9,11 @@ use App\General;
 use Auth;
 class GeneralController extends Controller
 {
-    
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
     /**
      * Display a listing of the resource.
      *

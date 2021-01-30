@@ -10,7 +10,11 @@ use Auth;
 
 class ProfessionalController extends Controller
 {
-   
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
     /**
      * Display a listing of the resource.
      *

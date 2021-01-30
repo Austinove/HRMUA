@@ -45,72 +45,72 @@ Route::post('/update-password', 'User\UserController@updatepassword');
 /*
 General
 */
-Route::get('/general', 'applicatns\GeneralController@index');
+Route::get('/general', 'GeneralController@index');
 /*
 professionals
 */
-Route::get('/professional', 'applicatns\ProfessionalController@index');
-Route::get('/professional/{id}', 'applicatns\ProfessionalController@singlePro');
-Route::get('/approve/professional/{id}', 'applicatns\ProfessionalController@approve');
-Route::get('/review/professional/{id}', 'applicatns\ProfessionalController@underReview');
-Route::get('/decline/professional/{id}', 'applicatns\ProfessionalController@decline');
+Route::get('/professional', 'ProfessionalController@index');
+Route::get('/professional/{id}', 'ProfessionalController@singlePro');
+Route::get('/approve/professional/{id}', 'ProfessionalController@approve');
+Route::get('/review/professional/{id}', 'ProfessionalController@underReview');
+Route::get('/decline/professional/{id}', 'ProfessionalController@decline');
 /*
 Cooperates
 */
-Route::get('/cooperates', 'applicatns\CooperateController@index');
-Route::get('/cooperates/{id}', 'applicatns\CooperateController@singleCoporate');
-Route::get('/approve/cooperate/{id}', 'applicatns\CooperateController@approve');
-Route::get('/review/cooperate/{id}', 'applicatns\CooperateController@underReview');
-Route::get('/decline/cooperate/{id}', 'applicatns\CooperateController@decline');
+Route::get('/cooperates', 'CooperateController@index');
+Route::get('/cooperates/{id}', 'CooperateController@singleCoporate');
+Route::get('/approve/cooperate/{id}', 'CooperateController@approve');
+Route::get('/review/cooperate/{id}', 'CooperateController@underReview');
+Route::get('/decline/cooperate/{id}', 'CooperateController@decline');
 /*
 Student
 */
-Route::get('/student', 'applicatns\StudentController@index');
-Route::get('/student/{id}', 'applicatns\StudentController@singleStudent');
-Route::get('/student/file/{id}', 'applicatns\StudentController@viewFile');
-Route::get('/student/image/{id}', 'applicatns\StudentController@viewImage');
-Route::get('/approve/student/{id}', 'applicatns\StudentController@approve');
-Route::get('/review/student/{id}', 'applicatns\StudentController@underReview');
-Route::get('/decline/student/{id}', 'applicatns\StudentController@decline');
+Route::get('/student', 'StudentController@index');
+Route::get('/student/{id}', 'StudentController@singleStudent');
+Route::get('/student/file/{id}', 'StudentController@viewFile');
+Route::get('/student/image/{id}', 'StudentController@viewImage');
+Route::get('/approve/student/{id}', 'StudentController@approve');
+Route::get('/review/student/{id}', 'StudentController@underReview');
+Route::get('/decline/student/{id}', 'StudentController@decline');
 /*
 Retired
 */
-Route::get('/retired', 'applicatns\RetiredController@index');
-Route::get('/retired/{id}', 'applicatns\RetiredController@singleRetired');
-Route::get('/approve/retired/{id}', 'applicatns\RetiredController@approve');
-Route::get('/review/retired/{id}', 'applicatns\RetiredController@underReview');
-Route::get('/decline/retired/{id}', 'applicatns\RetiredController@decline');
+Route::get('/retired', 'RetiredController@index');
+Route::get('/retired/{id}', 'RetiredController@singleRetired');
+Route::get('/approve/retired/{id}', 'RetiredController@approve');
+Route::get('/review/retired/{id}', 'RetiredController@underReview');
+Route::get('/decline/retired/{id}', 'RetiredController@decline');
 /*
 MemberType
 */
-Route::get('/memberType', 'others\MemberTypeController@index');
-Route::post('/post-membertype', 'others\MemberTypeController@store');
-Route::put('/edit-member-Type/{id}', 'others\MemberTypeController@edit');
-Route::get('/delete-type/{id}', 'others\MemberTypeController@destroy');
+Route::get('/memberType', 'MemberTypeController@index');
+Route::post('/post-membertype', 'MemberTypeController@store');
+Route::put('/edit-member-Type/{id}', 'MemberTypeController@edit');
+Route::get('/delete-type/{id}', 'MemberTypeController@destroy');
 /*
 Knowledge Hub
 */
-Route::get('/knowHub', 'others\KnowHubController@index');
-Route::post('/post-knowHub', 'others\KnowHubController@store');
-Route::put('/edit-knowHub/{id}', 'others\KnowHubController@edit');
-Route::get('/delete-knowhub/{id}', 'others\KnowHubController@destroy');
+Route::get('/knowHub', 'KnowHubController@index');
+Route::post('/post-knowHub', 'KnowHubController@store');
+Route::put('/edit-knowHub/{id}', 'KnowHubController@edit');
+Route::get('/delete-knowhub/{id}', 'KnowHubController@destroy');
 /*
 News,Events and updates
 */
-Route::get('/news', 'others\NewsUpdateController@newsupdates');
-Route::post('/post-news', 'others\NewsUpdateController@storeNews');
-Route::put('/edit-news/{id}', 'others\NewsUpdateController@editNews');
-Route::get('/delete-news/{id}', 'others\NewsUpdateController@destroyNews');
+Route::get('/newsView', 'NewsUpdateController@newsupdates');
+Route::post('/post-news', 'NewsUpdateController@storeNews');
+Route::put('/edit-news/{id}', 'NewsUpdateController@editNews');
+Route::get('/delete-news/{id}', 'NewsUpdateController@destroyNews');
 
-Route::get('/events', 'others\NewsUpdateController@events');
-Route::post('/post-event', 'others\NewsUpdateController@storeEvents');
-Route::put('/edit-event/{id}', 'others\NewsUpdateController@editEvent');
-Route::get('/delete-event/{id}', 'others\NewsUpdateController@destroyEvent');
+Route::get('/events', 'NewsUpdateController@events');
+Route::post('/post-event', 'NewsUpdateController@storeEvents');
+Route::put('/edit-event/{id}', 'NewsUpdateController@editEvent');
+Route::get('/delete-event/{id}', 'NewsUpdateController@destroyEvent');
 
-Route::get('/leadership', 'others\NewsUpdateController@leadership');
-Route::post('/post-leader', 'others\NewsUpdateController@storeLeader');
-Route::put('/edit-post-leader/{id}', 'others\NewsUpdateController@editleader');
-Route::get('/delete-leader/{id}', 'others\NewsUpdateController@destroyLeader');
+Route::get('/leadership', 'NewsUpdateController@leadership');
+Route::post('/post-leader', 'NewsUpdateController@storeLeader');
+Route::put('/edit-post-leader/{id}', 'NewsUpdateController@editleader');
+Route::get('/delete-leader/{id}', 'NewsUpdateController@destroyLeader');
 
 Route::get('/{any}', function(){
         return view('welcome');

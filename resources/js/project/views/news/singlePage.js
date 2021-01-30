@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "reactstrap";
 import { connect } from "react-redux";
+import { imageUrl } from "../../constants";
 import { fetch_news } from "../../actions/newsAction";
 
 function SinglePage({ fetch_news, newsData, loading, newsError, match }) {
@@ -33,10 +34,12 @@ function SinglePage({ fetch_news, newsData, loading, newsError, match }) {
         filterNews();
     }, [newsData]);
     return (
-        <>
+            <>      {news
+                ? news.map((newsVal, index) => (
             <div
+            key={index}
                 style={{
-                    backgroundImage: "url(/assets/img/logo/home-img.jpg)"
+                    backgroundImage: `url(/uploads/news/${ newsVal.image })`
                 }}
                 className="page-header single-header"
                 data-parallax={true}
@@ -44,6 +47,7 @@ function SinglePage({ fetch_news, newsData, loading, newsError, match }) {
             >
                 <div className="filter" />
             </div>
+                        )): null}
             <div className="main">
                 <div className="section text-left top-section">
                     {news

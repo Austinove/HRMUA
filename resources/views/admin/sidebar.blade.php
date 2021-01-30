@@ -45,7 +45,7 @@
             </a>
             <ul class="list-unstyled navbar__sub-list js-sub-list">
                 <li>
-                    <a href="/news">News</a>
+                    <a href="/newsView">News</a>
                 </li>
                 <li>
                     <a href="/events">Events</a>

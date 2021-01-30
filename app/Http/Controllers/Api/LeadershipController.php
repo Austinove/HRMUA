@@ -10,7 +10,11 @@ use App\Leadership;
 
 class LeadershipController extends Controller
 {
-   
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
     /**
      * Display a listing of the resource.
      *
