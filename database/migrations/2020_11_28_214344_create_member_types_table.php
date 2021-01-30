@@ -23,9 +23,7 @@ class CreateMemberTypesTable extends Migration
             array(
                 ['typeName'=>'Professional'],
                 ['typeName'=>'Student '],
-                ['typeName'=>'Retired'],
-                ['typeName'=>'Corporate'],
-                ['typeName'=>'Genral']
+                ['typeName'=>'Corporate']
             )
         );
     }
