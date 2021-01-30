@@ -158,7 +158,7 @@ class NewsUpdateController extends Controller
                 $news ->image=$filename;
             }
             $news  ->save();
-        return redirect('/news')->with('success','News Added');
+        return redirect('/newsView')->with('success','News Added');
     }
      /**
      * Show the form for editing the specified resource.
@@ -174,18 +174,19 @@ class NewsUpdateController extends Controller
         $news ->newsDesc=$request->input('newsDesc');
         if($request->hasFile('image')) {
             $image = $request->file('image');
-            $filename = $image->getClientOriginalName();
-            $image->move(public_path('uploads/news'), $filename);
-            $news->image = $request->file('image')->getClientOriginalName();
+            $extension=$image ->getClientOriginalExtension();
+            $filename = time().'.'.$extension;
+                $image->move('uploads/news/',$filename);
+                $news ->image=$filename;
         }
         $news ->update();
-        return redirect('/news')->with('success','News updated!');
+        return redirect('/newsView')->with('success','News updated!');
     }
     public function destroyNews($id)
     {
         $news = Newsletter::find($id);
         $news->delete();
-        return redirect('/news')->with('success','News delete! ');
+        return redirect('/newsView')->with('success','News delete! ');
     }
 
     /**

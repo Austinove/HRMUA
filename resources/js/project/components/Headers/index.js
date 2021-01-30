@@ -17,12 +17,6 @@ function PageHeader() {
             };
         }
     });
-    // const slides = [
-    //     { title: "First item", description: "Lorem ipsum" },
-    //     { title: "Second item", description: "Lorem ipsum" },
-    //     { title: "First item1", description: "Lorem ipsum" },
-    //     { title: "Second item1", description: "Lorem ipsum" }
-    // ];
     const slides = [
         {
             image: "../../../images/slides/1.jpeg",

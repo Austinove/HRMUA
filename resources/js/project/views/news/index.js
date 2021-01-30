@@ -12,7 +12,7 @@ import {
     UncontrolledDropdown
 } from "reactstrap";
 import CustomHeader from "../../components/Headers/customHeader";
-import homeImage from "../../assets/img/logo/home-img.jpg";
+import { imageUrl } from "../../constants";
 import { fetch_news, infinitNewsFetch } from "../../actions/newsAction";
 
 const News = ({
@@ -151,7 +151,7 @@ const News = ({
                                                   to={`/news/${news.id}`}
                                               >
                                                   <img
-                                                      src={homeImage}
+                                                      src={`${imageUrl}/uploads/news/${news.image}`}
                                                       height="200"
                                                       className="mr-3 media-image"
                                                       alt="News Image"

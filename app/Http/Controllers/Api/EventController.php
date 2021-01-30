@@ -31,7 +31,7 @@ class EventController extends Controller
 
     public function currentEvents()
     {
-        $events = Event::where("startdate",">=", now())->orderBy("startdate", "ASC")->get();
+        $events = Event::orderBy("startdate", "ASC")->get();
         return response()->json($events, 200);
     }
 
