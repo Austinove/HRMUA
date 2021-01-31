@@ -36,6 +36,7 @@
                             @foreach ($leadership as $item)
                                 <tr>
                                     <td>{{$item->id}}</td>
+                                    <td class="align-middle"><img src="{{ asset('/uploads/leaders/'.$item ->image)}}" width="60px" alt="Image"></td>
                                     <td class="align-middle">{{$item->name}}</td>
                                     <td class="align-middle">{{$item->title}}</td>
                                     <td class="align-middle">{{$item->description}}</td>
@@ -82,6 +83,11 @@
                                                         <div class="col-sm-10">
                                                             <textarea type="text" class = "form-control" rows = "3" name="description" >{{$item->description}}</textarea>
                                                         </div>
+                                                    </div>
+                                                    <div class="form-group" >
+                                                        <img src="{{ asset('uploads/leaders/'.$item ->image)}}" width="60" alt=" Image" >
+                                                        <br></br>
+                                                        <input type="file" name="image" class="form-control-file ">
                                                     </div>
                                                 </div>
                                                 <div class="modal-footer">
@@ -132,6 +138,12 @@
                                         <label class="control-label col-sm-2" for="description">Description</label>
                                         <div class="col-sm-10">
                                             <textarea type="text" class = "form-control" rows = "3" name="description" placeholder = "Description" required></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="control-label col-sm-2" for="image">Upload Leaders Image</label>
+                                        <div class="col-sm-10">
+                                            <input type="file" class="form-control" name="image">
                                         </div>
                                     </div>
                                 </div>

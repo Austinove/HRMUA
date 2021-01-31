@@ -87,7 +87,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
-                                                        <label class="control-label col-sm-2" for="newsDesc">Description</label>
+                                                        <label class="control-label col-sm-2" for="newsDesc">Description</label> 
                                                         <div class="col-sm-10">
                                                             <textarea type="text" class = "form-control" rows = "3" name="newsDesc" >{{$item->newsDesc}}</textarea>
                                                         </div>

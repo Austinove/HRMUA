@@ -106,11 +106,19 @@ class NewsUpdateController extends Controller
             'name' => 'required',
             'title' => 'required',
             'description' => 'required',
+            'image' => 'required|file|mimes:jpg,jpeg,bmp,png',
         ]);
             $leadership = new Leadership;
             $leadership ->name=$request->input('name');
             $leadership ->title=$request->input('title');
             $leadership ->description=$request->input('description');
+            if ($request->hasFile('image')) {
+                $file = $request->file('image');
+                $extension=$file ->getClientOriginalExtension();
+                $filename = time().'.'.$extension;
+                $file->move('uploads/leaders/',$filename);
+                $leadership ->image=$filename;
+            }
             
             $leadership  ->save();
         return redirect('/leadership')->with('success','Leader Added');
@@ -121,6 +129,13 @@ class NewsUpdateController extends Controller
         $leadership ->name=$request->input('name');
         $leadership ->title=$request->input('title');
         $leadership ->description=$request->input('description');
+        if($request->hasFile('image')) {
+            $image = $request->file('image');
+            $extension=$image ->getClientOriginalExtension();
+            $filename = time().'.'.$extension;
+                $image->move('uploads/leaders/',$filename);
+                $leadership->image=$filename;
+        }
         $leadership ->update();
         return redirect('/leadership')->with('success','Detail updated!');
     }
