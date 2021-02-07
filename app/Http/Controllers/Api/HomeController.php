@@ -21,7 +21,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $event = Event::orderBy("startdate", "ASC")->limit(100)->get();
+        $event = Event::orderBy("startdate", "DESC")->limit(100)->get();
         $slides = Home::all();
         $events = Event::where("startdate",">=", now())->orderBy("startdate", "ASC")->get();
         return response()->json([

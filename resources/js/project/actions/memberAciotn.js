@@ -10,7 +10,6 @@ const actionLoad = () => {
 export const register_member = (member_number) => {
   return (dispatch) => {
     dispatch(actionLoad());
-
     return api
       .register_member(member_data)
       .then((response) => {

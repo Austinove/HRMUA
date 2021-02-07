@@ -37,7 +37,7 @@ class NewsUpdateController extends Controller
     public function newsupdates()
     {
         //
-        $newsletter =Newsletter::all();
+        $newsletter =Newsletter::orderBy("created_at", "DESC")->get();
         return view('admin.knowledge.news')->with('newsletter',$newsletter);
     }
 
@@ -45,7 +45,7 @@ class NewsUpdateController extends Controller
     public function events()
     {
         //
-        $event = Event::all();
+        $event = Event::orderBy("created_at", "DESC")->get();
         return view('admin.knowledge.events')->with('event',$event);
     }
     public function storeEvents(Request $request)
@@ -212,7 +212,8 @@ class NewsUpdateController extends Controller
      */
     public function show($id)
     {
-        //
+        $news = Newsletter::find($id);
+        return view('admin.knowledge.newsPage')->with('news',$news);
     }
 
    

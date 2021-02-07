@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Button, Container, Col, Row } from "reactstrap";
 import Slider from "react-animated-slider";
+import { imageUrl } from "../../constants";
 import "react-animated-slider/build/horizontal.css";
-function PageHeader() {
+function PageHeader({ realSlides }) {
     let pageHeader = React.createRef();
-    React.useEffect(() => {
+    useEffect(() => {
         if (window.innerWidth < 991) {
             const updateScroll = () => {
                 let windowScrollTop = window.pageYOffset / 3;
@@ -17,69 +18,46 @@ function PageHeader() {
             };
         }
     });
-    const slides = [
-        {
-            image: "../../../images/slides/1.jpeg",
-            title: "Some title",
-            desc: "Cras sit amet nibh libero, in gravida nulla"
-        },
-        {
-            image: "../../../images/slides/2.jpeg",
-            title: "Some title",
-            desc: "Cras sit amet nibh libero, in gravida nulla"
-        },
-        {
-            image: "../../../images/slides/3.jpeg",
-            title: "Some title",
-            desc: "Cras sit amet nibh libero, in gravida nulla"
-        },
-        {
-            image: "../../../images/slides/4.jpeg",
-            title: "Some title",
-            desc: "Cras sit amet nibh libero, in gravida nulla"
-        },
-        {
-            image: "../../../images/slides/5.jpeg",
-            title: "Some title",
-            desc: "Cras sit amet nibh libero, in gravida nulla"
-        }
-    ];
 
     return (
         <Slider autoplay={true} duration={5000} infinite={true}>
-            {slides.map((slide, index) => (
-                <div
-                    style={{
-                        backgroundImage: `url(${slide.image})`
-                    }}
-                    className="page-header home-header"
-                    data-parallax={true}
-                    ref={pageHeader}
-                >
-                    <div className="filter" />
-                    <Container>
-                        <Row>
-                            <Col md={7} sm={12} className=" mt-2 ml-auto">
-                                <div className="motto text-center">
-                                    <h1 className="font-weight-bold">
-                                        Human Resource Association of Uganda
-                                    </h1>
-                                    <h3>Start with us</h3>
-                                    <br />
-                                    <Button
-                                        className="btn-round"
-                                        color="neutral"
-                                        type="button"
-                                        outline
-                                    >
-                                        Click to Register
-                                    </Button>
-                                </div>
-                            </Col>
-                        </Row>
-                    </Container>
-                </div>
-            ))}
+            {realSlides
+                ? realSlides.map((slide, index) => (
+                      <div
+                          style={{
+                              backgroundImage: `url(${imageUrl}/uploads/homeImages/${slide.image})`
+                          }}
+                          className="page-header home-header"
+                          data-parallax={true}
+                          ref={pageHeader}
+                      >
+                          <div className="filter" />
+                          <Container>
+                              <Row>
+                                  <Col md={7} sm={12} className=" mt-2 ml-auto">
+                                      <div className="motto text-center">
+                                          <h1 className="font-weight-bold">
+                                              {slide.title}
+                                          </h1>
+                                          <h3>{slide.description}</h3>
+                                          <br />
+                                          <Link to={`/application`}>
+                                              <Button
+                                                  className="btn-round"
+                                                  color="neutral"
+                                                  type="button"
+                                                  outline
+                                              >
+                                                  Click to Register
+                                              </Button>
+                                          </Link>
+                                      </div>
+                                  </Col>
+                              </Row>
+                          </Container>
+                      </div>
+                  ))
+                : null}
         </Slider>
     );
 }

@@ -97,6 +97,7 @@ Route::get('/delete-knowhub/{id}', 'KnowHubController@destroy');
 /*
 News,Events and updates
 */
+Route::get('/news/more/{id}', 'NewsUpdateController@show');
 Route::get('/newsView', 'NewsUpdateController@newsupdates');
 Route::post('/post-news', 'NewsUpdateController@storeNews');
 Route::put('/edit-news/{id}', 'NewsUpdateController@editNews');

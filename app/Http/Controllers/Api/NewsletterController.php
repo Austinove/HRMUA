@@ -22,7 +22,7 @@ class NewsletterController extends Controller
      */
     public function index()
     {
-        $newsletter = Newsletter::orderBy("created_at", "DESC")->limit(5)->get();
+        $newsletter = Newsletter::orderBy("created_at", "DESC")->limit(100)->get();
         $news = [];
         foreach ($newsletter as $value) {
             $row = [
@@ -40,7 +40,7 @@ class NewsletterController extends Controller
 
     public function infinite(Request $request){
         $newsletter = Newsletter::orderBy("created_at", "DESC")
-                     ->limit(5)->offset($request->offset)->get();
+                     ->limit(100)->offset($request->offset)->get();
         $news = [];
         foreach ($newsletter as $value) {
             $row = [
@@ -48,6 +48,7 @@ class NewsletterController extends Controller
                 "newsTitle" => $value->newsTitle,
                 "newsCategory" => $value->newsCategory,
                 "newsDesc" => $value->newsDesc,
+                "image" => $value->image,
                 "date" => date("d-m-yy", strtotime($value->created_at))."(".$value->created_at->diffForHumans().")"
             ];
             array_push($news, $row);

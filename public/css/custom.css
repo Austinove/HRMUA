@@ -91,3 +91,6 @@
 	width: 50px;
 }
 /*======profile CSS Rules =======*/
+.application-section{
+  min-height: 40vh !important;
+}

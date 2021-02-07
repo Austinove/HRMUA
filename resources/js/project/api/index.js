@@ -45,7 +45,7 @@ export default {
     fetch_leadership: () =>
         apiInstance({
             method: "GET",
-            url: "/leadership"
+            url: "/allleadership"
         }),
     //register Member
     coporate_member: user_data =>

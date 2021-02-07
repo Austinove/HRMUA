@@ -36,7 +36,10 @@ const Application = () => {
                 </Container>
             </div>
             <div className="main">
-                <div className="section text-left pt-3">
+                <div
+                    className="section text-left pt-3"
+                    style={{ minHeight: "40vh" }}
+                >
                     <Container>
                         <Row>
                             <Col className="mx-auto" md={8}>
@@ -58,7 +61,8 @@ const Application = () => {
                                                     onChange={memberChange}
                                                 />
                                                 Professional Member
-                                            </Label>|
+                                            </Label>
+                                            |
                                             <Label check className="mr-3">
                                                 <Input
                                                     type="radio"
@@ -67,7 +71,8 @@ const Application = () => {
                                                     onChange={memberChange}
                                                 />
                                                 Student Member
-                                            </Label>|
+                                            </Label>
+                                            |
                                             <Label check className="mr-3">
                                                 <Input
                                                     type="radio"
@@ -76,7 +81,8 @@ const Application = () => {
                                                     onChange={memberChange}
                                                 />
                                                 Retired Member
-                                            </Label>|
+                                            </Label>
+                                            |
                                             <Label check className="mr-3">
                                                 <Input
                                                     type="radio"
