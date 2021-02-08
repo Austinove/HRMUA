@@ -75,13 +75,14 @@
                                                 <div class="form-group row">
                                                     <label class="control-label col-sm-2" for="description">Description</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" name="description" id="description" value="{{$item->description}}" />
+                                                        <textarea type="text" class = "form-control" rows = "3" name="description" placeholder = "Description" required></textarea>
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label class="control-label col-sm-2" for="document">Update Document</label>
+                                                    <input class="form-control" readonly value="{{$item->document}}">
                                                     <div class="col-sm-10">
-                                                        <input type="file" class="form-control"  name="document" value="{{$item->document}}">
+                                                        <input type="file" name="document" class="form-control-file ">
                                                     </div>
                                                 </div>
                                             </div>
