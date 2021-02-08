@@ -80,8 +80,9 @@
                                                 </div>
                                                 <div class="form-group row">
                                                     <label class="control-label col-sm-2" for="document">Update Document</label>
-                                                    <input class="form-control" readonly value="{{$item->document}}">
                                                     <div class="col-sm-10">
+                                                        <input class="form-control" readonly value="{{$item->document}}">
+                                                        <br>
                                                         <input type="file" name="document" class="form-control-file ">
                                                     </div>
                                                 </div>
