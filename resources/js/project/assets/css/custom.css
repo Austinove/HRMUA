@@ -34,9 +34,7 @@ footer {
     list-style: none;
     padding-inline-start: 0px;
     color: #bfbebe;
-}
-.inner-ul > li {
-    margin-bottom: -20px;
+    line-height: 20px !important;
 }
 .footer-head {
     color: #ffff;
@@ -72,6 +70,7 @@ footer {
 .has-success > .footer-input {
     background-color: transparent;
 }
+
 .carousel-custom {
     height: 100%;
     width: 100%;
@@ -168,8 +167,8 @@ footer {
     text-align: center;
 }
 .timer div:last-child {
-        border: 1px solid #ffcec8;
-    border-radius: 3px;
+    /* border: 1px solid #ffcec8;
+    border-radius: 3px; */
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     margin-top: 3em;
@@ -227,6 +226,7 @@ section p:first-child, .timer div:last-child span {
 .bg-img{
     background-image: url("../img/bg-3.jpg");
     min-height: 800px;
+    width: 100%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -362,4 +362,7 @@ form .Knowledge-inputs{
 }
 .regular-tracks>li>.LinesEllipsis:hover{
     color: #a96a1f;
+}
+.custom-card-img {
+    height: 190px !important;
 }

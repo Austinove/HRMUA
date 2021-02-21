@@ -90,6 +90,7 @@ Route::get('/delete-type/{id}', 'MemberTypeController@destroy');
 /*
 Knowledge Hub
 */
+Route::get('/knowledge/more/{id}', 'KnowHubController@show');
 Route::get('/knowHub', 'KnowHubController@index');
 Route::post('/post-knowHub', 'KnowHubController@store');
 Route::put('/edit-knowHub/{id}', 'KnowHubController@edit');

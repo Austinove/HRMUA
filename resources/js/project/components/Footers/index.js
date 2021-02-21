@@ -25,20 +25,32 @@ function PageFooter() {
                                 </h3>
                                 <ul className="inner-ul">
                                     <li>
-                                        Phone:{" "}
-                                        <address> +256 200 903492/3</address>
+                                        <span>
+                                            <strong>Phone:</strong>
+                                            <br />
+                                            <i className="custom-color">
+                                                +256 200 903492/3
+                                            </i>
+                                        </span>
                                     </li>
                                     <li>
-                                        Email:{" "}
-                                        <address> connect@hrmau.org.ug</address>
+                                        <span>
+                                            <strong>Email:</strong>
+                                            <br />
+                                            <i className="custom-color">
+                                                connect@hrmau.org.ug
+                                            </i>
+                                        </span>
                                     </li>
                                     <li>
-                                        Address:{" "}
-                                        <address>
-                                            {" "}
-                                            Plot 20, Ntinda View crescent,
-                                            Naguru, Kampala
-                                        </address>
+                                        <span>
+                                            <strong>Address:</strong>
+                                            <br />
+                                            <i className="custom-color">
+                                                Plot 20, Ntinda View crescent,
+                                                Naguru, Kampala
+                                            </i>
+                                        </span>
                                     </li>
                                 </ul>
                             </li>
@@ -73,6 +85,7 @@ function PageFooter() {
                             </li>
                         </ul>
                     </Col>
+
                     <Col md={4} sm={6} className="mb-4">
                         <h3 className="footer-head mb-4">
                             Join our mailing list
@@ -83,7 +96,7 @@ function PageFooter() {
                         <form>
                             <FormGroup className="has-success">
                                 <Input
-                                    className="footer-input"
+                                    className="footer-input form-control form-control-sm"
                                     type="text"
                                     name="firstName"
                                     id="firstName"
@@ -92,7 +105,7 @@ function PageFooter() {
                             </FormGroup>
                             <FormGroup className="has-success">
                                 <Input
-                                    className="footer-input"
+                                    className="footer-input form-control form-control-sm"
                                     type="text"
                                     name="lastName"
                                     id="lastName"
@@ -104,7 +117,7 @@ function PageFooter() {
                                 className="has-success"
                             >
                                 <Input
-                                    className="footer-input"
+                                    className="footer-input form-control form-control-sm"
                                     type="email"
                                     name="email"
                                     id="emailId"
@@ -122,6 +135,7 @@ function PageFooter() {
                             </Button>
                         </form>
                     </Col>
+
                     <Col md={4} sm={6} className="mb-4">
                         <h3 className="footer-head mb-4">
                             Networks & Affiliations
@@ -131,7 +145,7 @@ function PageFooter() {
                             is affiliated with
                         </p>
                         <Row>
-                            <Col md={6}>
+                            <Col md={6} xs={6}>
                                 <a href="#">
                                     <img
                                         src={client1}
@@ -141,7 +155,7 @@ function PageFooter() {
                                     ></img>
                                 </a>
                             </Col>
-                            <Col md={6}>
+                            <Col md={6} xs={6}>
                                 <a href="#">
                                     <img
                                         height={100}

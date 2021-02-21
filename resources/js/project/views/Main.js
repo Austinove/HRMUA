@@ -12,6 +12,7 @@ import Knowledge from "./knowledge";
 import Application from "./application";
 import SinglePage from "./news/singlePage";
 import SingleKnowledge from "./knowledge/details";
+import ScrollToTop from "./scrollTop";
 
 const App = () => {
     document.documentElement.classList.remove("nav-open");
@@ -24,6 +25,7 @@ const App = () => {
     return (
         <>
             <BrowserRouter>
+                <ScrollToTop />
                 <PageNavbar />
                 <Switch>
                     <Route

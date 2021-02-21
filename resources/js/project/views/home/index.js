@@ -133,6 +133,7 @@ function HomePage({
                                             the future of the people profession
                                         </h5>
                                         <br />
+                                        <br />
                                         <Link to={`/about`}>
                                             <Button
                                                 className="btn-link text-info text-capitalize font-weight-normal"
@@ -161,6 +162,7 @@ function HomePage({
                                             in workspaces and lives every day
                                         </h5>
                                         <br />
+                                        <br />
                                         <Link to={`/about`}>
                                             <Button
                                                 className="btn-link text-info text-capitalize font-weight-normal"
@@ -182,99 +184,101 @@ function HomePage({
                 </div>
                 <div className="bg-img"></div>
                 <div className="section text-left float-section">
-                    <Container>
+                    <Container className="my-auto">
+                        <Row>
+                            {/* <Row className="text-left"> */}
+                            <h2 className=" home-title text-white mt-2 mb-4 font-weight-bold">
+                                Events/Trends
+                            </h2>
+                        </Row>
                         <Row className="my-auto">
-                            <Row className="text-left">
-                                <h2 className=" home-title text-white mt-2 mb-4 font-weight-bold">
-                                    Events/Trends
-                                </h2>
-                            </Row>
-                            <Row>
-                                <Col md="6" className="mx-auto">
-                                    <Card className="px-4 py-2">
-                                        <CardTitle>
-                                            <h5 className="custom-color custom-title news-head text-center">
-                                                Count Down to Upcoming Event
-                                            </h5>
-                                        </CardTitle>
-                                        <CardBody>
-                                            <EventTimer
-                                                event={requiredEvent}
-                                                eventCheck={noEvent}
-                                            />
-                                        </CardBody>
-                                    </Card>
-                                </Col>
-                                <Col md="6" className="mx-auto">
-                                    <Card className="p-4">
-                                        <CardTitle>
-                                            <h5 className="custom-color custom-title news-head text-center">
-                                                {noEvent || noNext
-                                                    ? "Last Event Attended"
-                                                    : "Next Listed Event"}
-                                            </h5>
-                                        </CardTitle>
-                                        <CardBody>
-                                            <ListGroup flush>
-                                                {nextEvent ? (
-                                                    <ListGroupItem className="transparent">
-                                                        <strong>
-                                                            {
-                                                                nextEvent.eventName
+                            <Col className="col-md-12 col-lg-6">
+                                <Card className="px-4 py-2">
+                                    <CardTitle>
+                                        <h5
+                                            style={{ fontSize: "25px" }}
+                                            className="custom-color custom-title news-head text-center"
+                                        >
+                                            Count Down to Upcoming Event
+                                        </h5>
+                                    </CardTitle>
+                                    <CardBody>
+                                        <EventTimer
+                                            event={requiredEvent}
+                                            eventCheck={noEvent}
+                                        />
+                                    </CardBody>
+                                </Card>
+                            </Col>
+                            <Col className="col-md-12 col-lg-6">
+                                <Card className="p-4">
+                                    <CardTitle>
+                                        <h5
+                                            style={{ fontSize: "25px" }}
+                                            className="custom-color custom-title news-head text-center"
+                                        >
+                                            {noEvent || noNext
+                                                ? "Last Event Attended"
+                                                : "Next Listed Event"}
+                                        </h5>
+                                    </CardTitle>
+                                    <CardBody>
+                                        <ListGroup flush>
+                                            {nextEvent ? (
+                                                <ListGroupItem className="transparent">
+                                                    <strong>
+                                                        {nextEvent.eventName}
+                                                    </strong>
+                                                    <p>
+                                                        <LinesEllipsis
+                                                            text={
+                                                                nextEvent.eventDesc
                                                             }
-                                                        </strong>
-                                                        <p>
-                                                            <LinesEllipsis
-                                                                text={
-                                                                    nextEvent.eventDesc
-                                                                }
-                                                                maxLine="4"
-                                                                ellipsis="......."
-                                                            />
-                                                        </p>
-                                                        <p className="text-muted">
-                                                            <span className="font-weight-bold">
-                                                                Venue:{" "}
-                                                            </span>{" "}
-                                                            {nextEvent.venue}
-                                                        </p>
-                                                        <br />
-                                                        <span className="font-12 float-left font-italic">
-                                                            Start Date:{" "}
-                                                            {
-                                                                nextEvent.startdate
-                                                            }
-                                                        </span>
-                                                        <span className="font-12 float-right font-italic">
-                                                            End Date:{" "}
-                                                            {nextEvent.endate}
-                                                        </span>
-                                                    </ListGroupItem>
-                                                ) : null}
-                                                <ListGroupItem className="transparent mb-0">
-                                                    <Link
-                                                        className="text-muted"
-                                                        to={`/allevents`}
-                                                    >
-                                                        <Button
-                                                            className="mt-2 mb-2 btn-lg float-right btn-link text-info text-capitalize font-weight-normal"
-                                                            color="primary"
-                                                            outline
-                                                            outline
-                                                        >
-                                                            More About Events
-                                                            <i
-                                                                className="fa fa-caret-right"
-                                                                aria-hidden="true"
-                                                            ></i>
-                                                        </Button>
-                                                    </Link>
+                                                            maxLine="4"
+                                                            ellipsis="......."
+                                                        />
+                                                    </p>
+                                                    <p className="text-muted">
+                                                        <span className="font-weight-bold">
+                                                            Venue:{" "}
+                                                        </span>{" "}
+                                                        {nextEvent.venue}
+                                                    </p>
+                                                    <br />
+                                                    <span className="font-12 float-left font-italic">
+                                                        Start Date:{" "}
+                                                        {nextEvent.startdate}
+                                                    </span>
+                                                    <span className="font-12 float-right font-italic">
+                                                        End Date:{" "}
+                                                        {nextEvent.endate}
+                                                    </span>
                                                 </ListGroupItem>
-                                            </ListGroup>
-                                        </CardBody>
-                                    </Card>
-                                </Col>
-                            </Row>
+                                            ) : null}
+                                            <ListGroupItem className="transparent mb-0">
+                                                <Link
+                                                    className="text-muted"
+                                                    to={`/allevents`}
+                                                >
+                                                    <Button
+                                                        className="mt-2 mb-2 btn-lg float-right btn-link text-info text-capitalize font-weight-normal"
+                                                        color="primary"
+                                                        outline
+                                                        outline
+                                                    >
+                                                        More About Events
+                                                        <i
+                                                            className="fa fa-caret-right"
+                                                            aria-hidden="true"
+                                                        ></i>
+                                                    </Button>
+                                                </Link>
+                                            </ListGroupItem>
+                                        </ListGroup>
+                                    </CardBody>
+                                </Card>
+                            </Col>
+                            {/* </Row> */}
                         </Row>
                     </Container>
                 </div>

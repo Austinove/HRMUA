@@ -1,7 +1,8 @@
 // API url
-// export const apiUrl = "http://127.0.0.1:8000/api/";
-export const apiUrl = "http://hrmau.arrowschool.org/api/";
-export const imageUrl = "http://hrmau.arrowschool.org";
+export const apiUrl = "http://127.0.0.1:8000/api/";
+export const imageUrl = "http://127.0.0.1:8000";
+// export const apiUrl = "http://hrmau.arrowschool.org/api/";
+// export const imageUrl = "http://hrmau.arrowschool.org";
 export const assetPath = "";
 export const homeConstants = {
     homeLoading: "action_loading_home",

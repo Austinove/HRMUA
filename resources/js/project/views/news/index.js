@@ -145,47 +145,55 @@ const News = ({
                                           md={12}
                                           key={index}
                                       >
-                                          <div className="media p-3">
-                                              <Link
-                                                  className="text-muted"
-                                                  to={`/news/${news.id}`}
-                                              >
-                                                  <img
-                                                      src={`${imageUrl}/uploads/news/${news.image}`}
-                                                      height="200"
-                                                      className="mr-3 media-image"
-                                                      alt="News Image"
-                                                  />
-                                              </Link>
-                                              <Link
-                                                  className="text-muted"
-                                                  to={`/news/${news.id}`}
-                                              >
-                                                  <div className="media-body">
-                                                      <a className="mt-2 font-weight-bold">
-                                                          {news.newsTitle}
-                                                      </a>
-                                                      <br />
-                                                      <span className="font-12">
-                                                          <strong>
-                                                              Category
-                                                          </strong>
-                                                          : {news.newsCategory}
-                                                      </span>
-                                                      <p className="mt-4">
-                                                          <LinesEllipsis
-                                                              text={
-                                                                  news.newsDesc
+                                          <div className="media p-3 row">
+                                              <div className="col-md-12 col-lg-4">
+                                                  <Link
+                                                      className="text-muted"
+                                                      to={`/news/${news.id}`}
+                                                  >
+                                                      <img
+                                                          src={`${imageUrl}/uploads/news/${news.image}`}
+                                                          height="200"
+                                                          //   width="300"
+                                                          className="mr-3 media-image img-fluid"
+                                                          alt="News Image"
+                                                      />
+                                                  </Link>
+                                              </div>
+                                              <div className="col-md-12 col-lg-8">
+                                                  <Link
+                                                      className="text-muted"
+                                                      to={`/news/${news.id}`}
+                                                  >
+                                                      <div className="media-body">
+                                                          <a className="mt-2 font-weight-bold">
+                                                              {news.newsTitle}
+                                                          </a>
+                                                          <br />
+                                                          <span className="font-12">
+                                                              <strong>
+                                                                  Category
+                                                              </strong>
+                                                              :{" "}
+                                                              {
+                                                                  news.newsCategory
                                                               }
-                                                              maxLine="3"
-                                                              ellipsis="...."
-                                                          />
-                                                      </p>
-                                                      <span className="font-12 float-right mt-4">
-                                                          {news.date}
-                                                      </span>
-                                                  </div>
-                                              </Link>
+                                                          </span>
+                                                          <p className="mt-4">
+                                                              <LinesEllipsis
+                                                                  text={
+                                                                      news.newsDesc
+                                                                  }
+                                                                  maxLine="3"
+                                                                  ellipsis="...."
+                                                              />
+                                                          </p>
+                                                          <span className="font-12 float-right mt-4">
+                                                              {news.date}
+                                                          </span>
+                                                      </div>
+                                                  </Link>
+                                              </div>
                                           </div>
                                       </Col>
                                   ))

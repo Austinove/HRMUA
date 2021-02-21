@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row, Col, Label, Input, FormGroup } from "reactstrap";
 import CustomHeader from "../../components/Headers/customHeader";
-import Retired from "./retired";
+// import Retired from "./retired";
 import Professional from "./professional";
 import Coporate from "./coporate";
 import Student from "./student";
@@ -72,7 +72,7 @@ const Application = () => {
                                                 />
                                                 Student Member
                                             </Label>
-                                            |
+                                            {/* |
                                             <Label check className="mr-3">
                                                 <Input
                                                     type="radio"
@@ -81,7 +81,7 @@ const Application = () => {
                                                     onChange={memberChange}
                                                 />
                                                 Retired Member
-                                            </Label>
+                                            </Label> */}
                                             |
                                             <Label check className="mr-3">
                                                 <Input
@@ -100,9 +100,10 @@ const Application = () => {
                         <hr />
                         <Row>
                             <Col className="ml-auto mr-auto" md="10">
-                                {memberType === "retired" ? (
-                                    <Retired />
-                                ) : memberType === "professional" ? (
+                                {// memberType === "retired" ? (
+                                //     <Retired />
+                                // ) :
+                                memberType === "professional" ? (
                                     <Professional />
                                 ) : memberType === "coporate" ? (
                                     <Coporate />

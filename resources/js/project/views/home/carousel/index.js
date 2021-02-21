@@ -26,6 +26,7 @@ const SimpleSlider = ({ slideNews }) => {
                               <Link to={`/news`}>
                                   <Card key={index}>
                                       <CardImg
+                                          className="custom-card-img"
                                           top
                                           src={`${imageUrl}/uploads/news/${news.image}`}
                                           alt="..."

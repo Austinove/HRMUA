@@ -519,7 +519,7 @@ const Student = ({ submit_student, userData, loading, submitError }) => {
                     <Row>
                         <Col md={10} className="mr-auto ml-5">
                             <Row className="mt-2">
-                                <Col md={10} className="mx-auto">
+                                <Col md={12} className="mx-auto">
                                     <FormGroup>
                                         <Label
                                             className="font-weight-bold"
@@ -555,7 +555,7 @@ const Student = ({ submit_student, userData, loading, submitError }) => {
                                         ) : null}
                                     </FormGroup>
                                 </Col>
-                                <Col md={10} className="mx-auto">
+                                <Col md={12} className="mx-auto">
                                     <FormGroup>
                                         <Label
                                             className="font-weight-bold"
@@ -608,155 +608,171 @@ const Student = ({ submit_student, userData, loading, submitError }) => {
                         </Col>
                     </Row>
                     <Row className="mt-2">
-                        <Col>
-                            <FormGroup>
-                                <Label for="instituteName">
-                                    Institution/University/College Name
-                                    <span className="text-danger font-12 ml-2">
-                                        *
-                                    </span>
-                                </Label>
-                                <Input
-                                    className="reg-inputs"
-                                    type="text"
-                                    name="instituteName"
-                                    id="instituteName"
-                                    placeholder="Enter InstituteName"
-                                    required
-                                    value={values.instituteName}
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                    className={
-                                        touched.instituteName &&
-                                        errors.instituteName
-                                            ? "reg-inputs errorInput"
-                                            : "reg-inputs"
-                                    }
-                                />
-                                {touched.instituteName &&
-                                errors.instituteName ? (
-                                    <div className="text-danger mt-1 font-12">
-                                        {errors.instituteName}
-                                    </div>
-                                ) : null}
-                            </FormGroup>
-                        </Col>
-                        <Col>
-                            <FormGroup>
-                                <Label for="qualitication">
-                                    Resource related Qualifications
-                                    <span className="text-danger font-12 ml-2">
-                                        *
-                                    </span>
-                                </Label>
-                                <Input
-                                    type="file"
-                                    multiple
-                                    onChange={handleUpload}
-                                    name="qualifications"
-                                    required
-                                />
-                                <FormText color="danger">
-                                    <i>
-                                        • Attach photocopies of academic
-                                        transcripts and a passport photograph,
-                                        All in one file.(Vital)
-                                    </i>
-                                </FormText>
-                            </FormGroup>
+                        <Col md="10" className="mx-auto">
+                            <Row>
+                                <Col>
+                                    <FormGroup>
+                                        <Label for="instituteName">
+                                            Institution/University/College Name
+                                            <span className="text-danger font-12 ml-2">
+                                                *
+                                            </span>
+                                        </Label>
+                                        <Input
+                                            className="reg-inputs"
+                                            type="text"
+                                            name="instituteName"
+                                            id="instituteName"
+                                            placeholder="Enter InstituteName"
+                                            required
+                                            value={values.instituteName}
+                                            onChange={handleChange}
+                                            onBlur={handleBlur}
+                                            className={
+                                                touched.instituteName &&
+                                                errors.instituteName
+                                                    ? "reg-inputs errorInput"
+                                                    : "reg-inputs"
+                                            }
+                                        />
+                                        {touched.instituteName &&
+                                        errors.instituteName ? (
+                                            <div className="text-danger mt-1 font-12">
+                                                {errors.instituteName}
+                                            </div>
+                                        ) : null}
+                                    </FormGroup>
+                                </Col>
+                                <Col>
+                                    <FormGroup>
+                                        <Label for="qualitication">
+                                            Resource related Qualifications
+                                            <span className="text-danger font-12 ml-2">
+                                                *
+                                            </span>
+                                        </Label>
+                                        <Input
+                                            type="file"
+                                            multiple
+                                            onChange={handleUpload}
+                                            name="qualifications"
+                                            required
+                                        />
+                                        <FormText color="danger">
+                                            <i>
+                                                • Attach photocopies of academic
+                                                transcripts and a passport
+                                                photograph, All in one
+                                                file.(Vital)
+                                            </i>
+                                        </FormText>
+                                    </FormGroup>
+                                </Col>
+                            </Row>
                         </Col>
                     </Row>
                     <Row>
-                        <Col md={6}>
-                            <FormGroup>
-                                <Label for="completion">
-                                    What do you hope to complete{" "}
-                                    <span className="text-danger font-12 ml-2">
-                                        *
+                        <Col md="10" className="mx-auto">
+                            <Row>
+                                <Col md={6}>
+                                    <FormGroup>
+                                        <Label for="completion">
+                                            What do you hope to complete{" "}
+                                            <span className="text-danger font-12 ml-2">
+                                                *
+                                            </span>
+                                        </Label>
+                                        <Input
+                                            className="reg-inputs"
+                                            type="text"
+                                            name="std_completion"
+                                            id="std_completion"
+                                            placeholder="Enter completion"
+                                            required
+                                            value={values.std_completion}
+                                            onChange={handleChange}
+                                            onBlur={handleBlur}
+                                            className={
+                                                touched.std_completion &&
+                                                errors.std_completion
+                                                    ? "reg-inputs errorInput"
+                                                    : "reg-inputs"
+                                            }
+                                        />
+                                        {touched.std_completion &&
+                                        errors.std_completion ? (
+                                            <div className="text-danger mt-1 font-12">
+                                                {errors.std_completion}
+                                            </div>
+                                        ) : null}
+                                    </FormGroup>
+                                </Col>
+                                <Label check className="p-4">
+                                    <Input
+                                        type="checkbox"
+                                        onChange={declaring}
+                                    />{" "}
+                                    I confirm that the information I have
+                                    provided is a representation of all my/our
+                                    personal, academic, professional,
+                                    organizational profile.
+                                    <span className="form-check-sign">
+                                        <span className="check"></span>
                                     </span>
                                 </Label>
-                                <Input
-                                    className="reg-inputs"
-                                    type="text"
-                                    name="std_completion"
-                                    id="std_completion"
-                                    placeholder="Enter completion"
-                                    required
-                                    value={values.std_completion}
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                    className={
-                                        touched.std_completion &&
-                                        errors.std_completion
-                                            ? "reg-inputs errorInput"
-                                            : "reg-inputs"
-                                    }
-                                />
-                                {touched.std_completion &&
-                                errors.std_completion ? (
-                                    <div className="text-danger mt-1 font-12">
-                                        {errors.std_completion}
-                                    </div>
+                                {submitError === "success" ? (
+                                    <Alert
+                                        className=" mt-2"
+                                        color="success"
+                                        isOpen={visible}
+                                        toggle={onDismiss}
+                                    >
+                                        <strong>
+                                            Aplication submitted successfully
+                                        </strong>{" "}
+                                        <br />
+                                        We shall update you about the request on
+                                        your Email. Thank you...
+                                    </Alert>
                                 ) : null}
-                            </FormGroup>
+                                {submitError === "error occuired" ? (
+                                    <Alert
+                                        className=" mt-2"
+                                        color="danger"
+                                        isOpen={visible}
+                                        toggle={onDismiss}
+                                    >
+                                        <strong className="mr-5">
+                                            Error Occured While applying
+                                        </strong>
+                                        <br />
+                                        Please Apply again
+                                    </Alert>
+                                ) : null}
+                            </Row>
+
+                            <Button
+                                size="md"
+                                variant="outline-info"
+                                className="outline-custom-purple ml-4 mt-2"
+                                type="submit"
+                                disabled={
+                                    !declar || loading === "submiting"
+                                        ? true
+                                        : false
+                                }
+                                onClick={handleSubmit}
+                            >
+                                <i
+                                    className="fa fa-check-circle-o"
+                                    aria-hidden="true"
+                                ></i>{" "}
+                                {loading === "submiting"
+                                    ? "Submiting Wait..."
+                                    : "Submit Application"}
+                            </Button>
                         </Col>
-                        <Label check className="p-4">
-                            <Input type="checkbox" onChange={declaring} /> I
-                            confirm that the information I have provided is a
-                            representation of all my/our personal, academic,
-                            professional, organizational profile.
-                            <span className="form-check-sign">
-                                <span className="check"></span>
-                            </span>
-                        </Label>
-                        {submitError === "success" ? (
-                            <Alert
-                                className=" mt-2"
-                                color="success"
-                                isOpen={visible}
-                                toggle={onDismiss}
-                            >
-                                <strong>
-                                    Aplication submitted successfully
-                                </strong>{" "}
-                                <br />
-                                We shall update you about the request on your
-                                Email. Thank you...
-                            </Alert>
-                        ) : null}
-                        {submitError === "error occuired" ? (
-                            <Alert
-                                className=" mt-2"
-                                color="danger"
-                                isOpen={visible}
-                                toggle={onDismiss}
-                            >
-                                <strong className="mr-5">
-                                    Error Occured While applying
-                                </strong>
-                                <br />
-                                Please Apply again
-                            </Alert>
-                        ) : null}
                     </Row>
-                    <Button
-                        size="md"
-                        variant="outline-info"
-                        className="outline-custom-purple ml-4 mt-2"
-                        type="submit"
-                        disabled={
-                            !declar || loading === "submiting" ? true : false
-                        }
-                        onClick={handleSubmit}
-                    >
-                        <i
-                            className="fa fa-check-circle-o"
-                            aria-hidden="true"
-                        ></i>{" "}
-                        {loading === "submiting"
-                            ? "Submiting Wait..."
-                            : "Submit Application"}
-                    </Button>
                 </form>
             )}
         </Formik>
