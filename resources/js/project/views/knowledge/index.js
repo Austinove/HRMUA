@@ -22,6 +22,7 @@ import {
     fetch_knowledge,
     infinitKnowledgeFetch
 } from "../../actions/knowledgeAction";
+// import samplePDF from "../../assets/another.pdf";
 const Knowledge = ({
     fetch_knowledge,
     knowledgeData,
@@ -128,6 +129,11 @@ const Knowledge = ({
                                                       md="12"
                                                       key={index}
                                                   >
+                                                      {/* <Link
+                                                          target="_blank"
+                                                          className="text-muted"
+                                                          to={`/pdfViewer/${samplePDF}`}
+                                                      ></Link> */}
                                                       <Media>
                                                           <Media
                                                               body

@@ -153,7 +153,7 @@ const News = ({
                                                   >
                                                       <img
                                                           src={`${imageUrl}/uploads/news/${news.image}`}
-                                                          height="200"
+                                                          height="100"
                                                           //   width="300"
                                                           className="mr-3 media-image img-fluid"
                                                           alt="News Image"
