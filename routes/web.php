@@ -22,6 +22,10 @@ Route::get('/dashboard', function () {
 })->name("myDashboard");
 
 Auth::routes();
+Route::get("/user/knowledge/{id}", function($fileName){
+    $pathName = 'uploads/document/'.$fileName;
+    return response()->file($pathName);
+});
 
 Route::get('/home', 'HomeController@index')->name('home');
 

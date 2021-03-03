@@ -97,19 +97,7 @@ class StudentController extends Controller
     public function viewFile($fileName)
     {
         $pathName = 'students/'.$fileName;
-        return Response::make(file_get_contents(public_path().'/'.$pathName), 200, [
-            'Content-Type' => 'application/pdf',
-            'Content-Disposition' => 'inline; filename='
-        ]);
-    }
-
-    //image file
-    public function viewImage($fileName){
-        $pathName = 'students/'.$fileName;
-        return Response::make(file_get_contents(public_path().'/'.$pathName), 200, [
-            'Content-Type' => 'image',
-            'Content-Disposition' => 'inline; filename='
-        ]);
+        return response()->file($pathName);
     }
 
     /**

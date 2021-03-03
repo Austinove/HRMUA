@@ -23,6 +23,7 @@ import {
     infinitKnowledgeFetch
 } from "../../actions/knowledgeAction";
 // import samplePDF from "../../assets/another.pdf";
+import { imageUrl } from "../../constants";
 const Knowledge = ({
     fetch_knowledge,
     knowledgeData,
@@ -163,8 +164,8 @@ const Knowledge = ({
                                                               </Link>
                                                               {knowledge.document ? (
                                                                   <a
-                                                                      href={`/uploads/document/${knowledge.document}`}
-                                                                      download
+                                                                      target="_blank"
+                                                                      href={`${imageUrl}/user/knowledge/${knowledge.document}`}
                                                                   >
                                                                       <Button
                                                                           color="warning"
@@ -172,10 +173,10 @@ const Knowledge = ({
                                                                           outline
                                                                       >
                                                                           <i
-                                                                              className="fa fa-download"
+                                                                              className="fa fa-file-pdf"
                                                                               aria-hidden="true"
                                                                           ></i>{" "}
-                                                                          Download
+                                                                          View
                                                                           Document
                                                                       </Button>
                                                                   </a>

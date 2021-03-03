@@ -83,14 +83,7 @@
                                         <div class="card-text text-sm-left">
                                             <span>
                                                 <strong>Student Documents</strong><br/>
-                                                @php
-                                                    if(stripos($student->studentFile, "pdf")){
-                                                        echo '<a target="_blank" class="mt-2 btn btn-sm btn-outline-info" download href="/student/'. $student->studentFile.'" role="button"><i class="fa fa-file" aria-hidden="true"></i> View Document</a>';
-                                                    }else{
-                                                        echo '<a target="_blank" class="mt-2 btn btn-sm btn-outline-info" download href="/student/'.$student->studentFile.'" role="button"><i class="fa fa-file" aria-hidden="true"></i> View Document image</a>';
-                                                    }
-                                                @endphp
-                                                
+                                                <a target="_blank" class="mt-2 btn btn-sm btn-outline-info" href="/student/file/{{ $student->studentFile }}" role="button"><i class="fa fa-file" aria-hidden="true"></i> View Document</a>
                                             </span>
                                         </div>
                                     </div>
