@@ -132,7 +132,7 @@ function TopNavbar() {
               </NavItem>
               <NavItem>
                 <NavLink to="/application" tag={Link}>
-                  Login/Register
+                  Apply/Register
                 </NavLink>
               </NavItem>
             </Nav>

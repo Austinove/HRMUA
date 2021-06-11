@@ -54,23 +54,33 @@ const Application = () => {
                                         <br />
                                         <FormGroup check>
                                             <Label check className="mr-3">
-                                                <Input
-                                                    type="radio"
-                                                    name="memberRadio"
-                                                    value="professional"
-                                                    onChange={memberChange}
-                                                />
-                                                Professional Member
+                                                <a
+                                                    href="https://hrmau.glueup.com/membership/5209/apply/"
+                                                    target="_blank"
+                                                >
+                                                    <Input
+                                                        type="radio"
+                                                        name="memberRadio"
+                                                        value="professional"
+                                                        onChange={memberChange}
+                                                    />
+                                                    Professional Member
+                                                </a>
                                             </Label>
                                             |
                                             <Label check className="mr-3">
-                                                <Input
-                                                    type="radio"
-                                                    name="memberRadio"
-                                                    value="student"
-                                                    onChange={memberChange}
-                                                />
-                                                Student Member
+                                                <a
+                                                    href="https://hrmau.glueup.com/membership/5210/apply/"
+                                                    target="_blank"
+                                                >
+                                                    <Input
+                                                        type="radio"
+                                                        name="memberRadio"
+                                                        value="student"
+                                                        onChange={memberChange}
+                                                    />
+                                                    Student Member
+                                                </a>
                                             </Label>
                                             {/* |
                                             <Label check className="mr-3">
@@ -84,13 +94,18 @@ const Application = () => {
                                             </Label> */}
                                             |
                                             <Label check className="mr-3">
-                                                <Input
-                                                    type="radio"
-                                                    name="memberRadio"
-                                                    value="coporate"
-                                                    onChange={memberChange}
-                                                />
-                                                Coporate Member
+                                                <a
+                                                    href="https://hrmau.glueup.com/membership/4980/apply/"
+                                                    target="_blank"
+                                                >
+                                                    <Input
+                                                        type="radio"
+                                                        name="memberRadio"
+                                                        value="coporate"
+                                                        onChange={memberChange}
+                                                    />
+                                                    Coporate Member
+                                                </a>
                                             </Label>
                                         </FormGroup>
                                     </Col>
