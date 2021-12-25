@@ -90,6 +90,12 @@ function TopNavbar() {
                 </NavLink>
               </NavItem>
               <NavItem>
+                <NavLink href="https://deloi.tt/3pBUJka" target="_blank">
+                  {" "}
+                  HR Reveal Awards{" "}
+                </NavLink>
+              </NavItem>
+              <NavItem>
                 <Dropdown
                   onMouseEnter={onmouseenter}
                   onMouseLeave={onmouseleave}
