@@ -91,3 +91,12 @@
 	width: 50px;
 }
 /*======profile CSS Rules =======*/
+.application-section{
+  min-height: 40vh !important;
+}
+.text-black {
+  color: black !important;
+}
+.overview-item {
+    box-shadow: 0px 2px 5px 0px rgb(0 0 0 / 41%) !important;
+}

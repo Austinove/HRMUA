@@ -38,9 +38,7 @@ const AboutUs = () => {
                 </Container>
             </div>
             <div className="main">
-                <div
-                    className="head-section section text-left page-header aboutus-bg"
-                >
+                <div className="head-section section text-left page-header aboutus-bg">
                     <Container>
                         <Row>
                             <Col
@@ -50,7 +48,7 @@ const AboutUs = () => {
                                 <h1 className="font-weight-bold ml-2 mb-2 about-head text-white">
                                     Introduction
                                 </h1>
-                                <p className="custom-text text-white">
+                                <p className="custom-text font-weight-bold text-white">
                                     We are a professional body that brings
                                     together over 700 Private Human Resources
                                     Practitioners and Professionals, the
@@ -70,19 +68,19 @@ const AboutUs = () => {
                     <Container>
                         <Row>
                             <Col md={6}>
-                                <div className="float-card info text-center bg-white pt-5 px-4">
-                                    <div className="icon icon-info custom-color">
+                                <div className="float-card info bg-white pt-5 px-4">
+                                    <div className="icon icon-info text-center custom-color">
                                         <i className="nc-icon nc-bulb-63" />
                                     </div>
-                                    <div className="description">
-                                        <h4 className="custom-color font-weight-bold text-center ml-2 mb-2 about-head">
-                                            Our Vision
+                                    <div className="description px-5">
+                                        <h4 className="custom-color font-weight-bold ml-2 mb-2 about-head">
+                                            Vision and Mission
                                         </h4>
                                         <p className="custom-text">
-                                            To be a leading Professional
-                                            association in People management
-                                            that enhances competence
-                                            productivity and quality of life
+                                            Vision: <br/> Inspire and nature Human Resource Professionals
+                                        </p>
+                                        <p className="custom-text">
+                                            Mission: <br/> Develop and regulate Human Resource practices that transform people, workplaces, and businesses.
                                         </p>
                                         <Button
                                             className="btn-link"
@@ -95,19 +93,26 @@ const AboutUs = () => {
                                 </div>
                             </Col>
                             <Col md={6}>
-                                <div className="float-card info text-center bg-white pt-5 px-4">
-                                    <div className="icon icon-info custom-color">
+                                <div className="float-card mb-md-5 info bg-white pt-5 px-4">
+                                    <div className="icon icon-info text-center custom-color">
                                         <i className="nc-icon nc-sun-fog-29" />
                                     </div>
-                                    <div className="description">
-                                        <h4 className="custom-color font-weight-bold text-center ml-2 mb-2 about-head">
-                                            Our Mission
+                                    <div className="description px-4">
+                                        <h4 className="custom-color font-weight-bold ml-2 mb-2 about-head">
+                                            Values and Tagline
                                         </h4>
-                                        <p className="custom-text">
-                                            Institute standards, enhance
-                                            development and promote Human
-                                            Resource Management as a strategic
-                                            function in organization
+                                        <p className="pb-0 custom-text">
+                                            Values:
+                                            <ul>
+                                                <li>Stewardship</li>
+                                                <li>Professionalism</li>
+                                                <li>Innovation</li>
+                                                <li>Collaboration</li>
+                                                <li>Integrity</li>
+                                            </ul>
+                                        </p>
+                                        <p className="custom-text custom-color">
+                                            Tagline: Develop and celebrating talent.
                                         </p>
                                         <Button
                                             className="btn-link"
@@ -134,9 +139,7 @@ const AboutUs = () => {
                                                         "url(/assets/img/logo/target.png)",
                                                     minHeight: "30vh"
                                                 }}
-                                            >
-                                                {/* <CardImg top src={target} alt="Vision" /> */}
-                                            </Col>
+                                            ></Col>
                                             <Col md={10}>
                                                 <Row>
                                                     <CardTitle className="custom-color font-weight-bold ml-2 mb-2 about-head">
@@ -148,98 +151,83 @@ const AboutUs = () => {
                                                         <ul>
                                                             <li>
                                                                 <CardText>
-                                                                    Institute
-                                                                    standards,
-                                                                    enhance
-                                                                    development
+                                                                    To encourage
                                                                     and promote
-                                                                    Human
-                                                                    Resource
+                                                                    the
+                                                                    development
+                                                                    of the Human
+                                                                    Resources
                                                                     Management
-                                                                    as a
-                                                                    strategic
-                                                                    function in
-                                                                    organization
+                                                                    practice.
                                                                 </CardText>
                                                             </li>
                                                             <li>
                                                                 <CardText>
-                                                                    Institute
-                                                                    standards,
-                                                                    enhance
-                                                                    development
-                                                                    and promote
+                                                                    To maintain
+                                                                    and foster
                                                                     Human
-                                                                    Resource
-                                                                    Management
-                                                                    as a
-                                                                    strategic
-                                                                    function in
-                                                                    organization
+                                                                    Resources
+                                                                    management
+                                                                    practice in
+                                                                    commerce,
+                                                                    industry,
+                                                                    trade,
+                                                                    government,
+                                                                    para-government,
+                                                                    voluntary
+                                                                    organizations
+                                                                    and others.
                                                                 </CardText>
                                                             </li>
                                                             <li>
                                                                 <CardText>
-                                                                    Institute
-                                                                    standards,
-                                                                    enhance
-                                                                    development
-                                                                    and promote
-                                                                    Human
-                                                                    Resource
-                                                                    Management
-                                                                    as a
-                                                                    strategic
-                                                                    function in
-                                                                    organization
+                                                                    To foster
+                                                                    and maintain
+                                                                    high
+                                                                    professional
+                                                                    standards
+                                                                    among Human
+                                                                    Resources
+                                                                    practitioners.
                                                                 </CardText>
                                                             </li>
                                                             <li>
                                                                 <CardText>
-                                                                    Institute
-                                                                    standards,
-                                                                    enhance
-                                                                    development
-                                                                    and promote
-                                                                    Human
-                                                                    Resource
-                                                                    Management
-                                                                    as a
-                                                                    strategic
-                                                                    function in
-                                                                    organization
+                                                                    To act as a
+                                                                    pressure
+                                                                    group to
+                                                                    safeguard
+                                                                    the
+                                                                    professional
+                                                                    interests of
+                                                                    the members.
                                                                 </CardText>
                                                             </li>
                                                             <li>
                                                                 <CardText>
-                                                                    Institute
-                                                                    standards,
-                                                                    enhance
-                                                                    development
-                                                                    and promote
-                                                                    Human
-                                                                    Resource
-                                                                    Management
-                                                                    as a
-                                                                    strategic
-                                                                    function in
-                                                                    organization
-                                                                </CardText>
-                                                            </li>
-                                                            <li>
-                                                                <CardText>
-                                                                    Institute
-                                                                    standards,
-                                                                    enhance
-                                                                    development
-                                                                    and promote
-                                                                    Human
-                                                                    Resource
-                                                                    Management
-                                                                    as a
-                                                                    strategic
-                                                                    function in
-                                                                    organization
+                                                                    To
+                                                                    organize/arrange
+                                                                    meetings,
+                                                                    tours,
+                                                                    lectures,
+                                                                    discussions,
+                                                                    conferences
+                                                                    and seminars
+                                                                    for
+                                                                    practitioners
+                                                                    and/management
+                                                                    or for both
+                                                                    to enable
+                                                                    them to
+                                                                    exchange
+                                                                    views,
+                                                                    ideas,
+                                                                    experiences,
+                                                                    information
+                                                                    etc, in the
+                                                                    interest of
+                                                                    the
+                                                                    profession.
                                                                 </CardText>
                                                             </li>
                                                         </ul>
@@ -248,98 +236,46 @@ const AboutUs = () => {
                                                         <ul>
                                                             <li>
                                                                 <CardText>
-                                                                    Institute
-                                                                    standards,
-                                                                    enhance
-                                                                    development
-                                                                    and promote
-                                                                    Human
-                                                                    Resource
-                                                                    Management
-                                                                    as a
-                                                                    strategic
-                                                                    function in
-                                                                    organization
+                                                                    To provide
+                                                                    consultancy
+                                                                    and advice
+                                                                    on Human
+                                                                    Resources
+                                                                    management
+                                                                    practice and
+                                                                    operation to
+                                                                    National
+                                                                    Institutions
+                                                                    and any
+                                                                    other
+                                                                    interested
+                                                                    parties.
                                                                 </CardText>
                                                             </li>
                                                             <li>
                                                                 <CardText>
-                                                                    Institute
-                                                                    standards,
-                                                                    enhance
-                                                                    development
-                                                                    and promote
+                                                                    To act as
+                                                                    clearing
+                                                                    House on
                                                                     Human
-                                                                    Resource
+                                                                    Resources
                                                                     Management
-                                                                    as a
-                                                                    strategic
-                                                                    function in
-                                                                    organization
+                                                                    practices.
                                                                 </CardText>
                                                             </li>
                                                             <li>
                                                                 <CardText>
-                                                                    Institute
-                                                                    standards,
-                                                                    enhance
-                                                                    development
-                                                                    and promote
-                                                                    Human
-                                                                    Resource
-                                                                    Management
-                                                                    as a
-                                                                    strategic
-                                                                    function in
-                                                                    organization
-                                                                </CardText>
-                                                            </li>
-                                                            <li>
-                                                                <CardText>
-                                                                    Institute
-                                                                    standards,
-                                                                    enhance
-                                                                    development
-                                                                    and promote
-                                                                    Human
-                                                                    Resource
-                                                                    Management
-                                                                    as a
-                                                                    strategic
-                                                                    function in
-                                                                    organization
-                                                                </CardText>
-                                                            </li>
-                                                            <li>
-                                                                <CardText>
-                                                                    Institute
-                                                                    standards,
-                                                                    enhance
-                                                                    development
-                                                                    and promote
-                                                                    Human
-                                                                    Resource
-                                                                    Management
-                                                                    as a
-                                                                    strategic
-                                                                    function in
-                                                                    organization
-                                                                </CardText>
-                                                            </li>
-                                                            <li>
-                                                                <CardText>
-                                                                    Institute
-                                                                    standards,
-                                                                    enhance
-                                                                    development
-                                                                    and promote
-                                                                    Human
-                                                                    Resource
-                                                                    Management
-                                                                    as a
-                                                                    strategic
-                                                                    function in
-                                                                    organization
+                                                                    To publish
+                                                                    periodically
+                                                                    a bulletin
+                                                                    containing
+                                                                    information
+                                                                    and general
+                                                                    professional
+                                                                    interests
+                                                                    for
+                                                                    circulation
+                                                                    to members.
                                                                 </CardText>
                                                             </li>
                                                         </ul>

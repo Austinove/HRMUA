@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Container, Row, Col, Button } from "reactstrap";
 import { Tabs, Tab } from "react-bootstrap-tabs";
 import CustomHeader from "../../components/Headers/customHeader";
@@ -129,17 +130,19 @@ const Membership = () => {
                                         </p>
                                     </li>
                                 </ul>
-                                <Button
-                                    color="default"
-                                    className="btn-round text-capitalize font-weight-normal mt-2"
-                                    outline
-                                >
-                                    Click to Register{" "}
-                                    <i
-                                        class="fa fa-arrow-right"
-                                        aria-hidden="true"
-                                    ></i>
-                                </Button>
+                                <Link to={`/application`}>
+                                    <Button
+                                        color="default"
+                                        className="btn-round text-capitalize font-weight-normal mt-2"
+                                        outline
+                                    >
+                                        Click to Register{" "}
+                                        <i
+                                            class="fa fa-arrow-right"
+                                            aria-hidden="true"
+                                        ></i>
+                                    </Button>
+                                </Link>
                             </Col>
                         </Row>
                     </Container>
@@ -173,37 +176,88 @@ const Membership = () => {
                                         <ul>
                                             <li>
                                                 <p>
-                                                    Must have studied Human
-                                                    Resource Management at
-                                                    undergraduate or
-                                                    postgraduate level or
-                                                    practicing Human Resource in
-                                                    formal organizations
+                                                    Subsidized Professional
+                                                    Membership for up to 10 HR
+                                                    practitioners within your
+                                                    Organisation
                                                 </p>
                                             </li>
                                             <li>
                                                 <p>
-                                                    Must not have any criminal
-                                                    record in employment.
+                                                    Receive the Association’s
+                                                    publications
                                                 </p>
                                             </li>
                                             <li>
                                                 <p>
-                                                    Must be willing to comply
-                                                    with the fees structure.
+                                                    Subsidized HR and OD
+                                                    Consultancy services
                                                 </p>
                                             </li>
                                             <li>
                                                 <p>
-                                                    Must be willing to remain
-                                                    non-political
+                                                    Obtain information on the HR
+                                                    management practice through
+                                                    a periodical newsletter
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>Free job advertisement</p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Subsidized shortlisting &
+                                                    pre-screening interview
                                                 </p>
                                             </li>
                                             <li>
                                                 <p>
-                                                    Must be willing to abide by
-                                                    code of ethics
+                                                    Subsidized Capacity Building
+                                                    or Training on HR topical
+                                                    issues (Professional
+                                                    Development)
                                                 </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Subsidized recruitment and
+                                                    resourcing
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>Subsidized staff handling</p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Recruitment panel support
+                                                    for senior HR roles
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Logo placement on the
+                                                    website
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Headhunting and referral at
+                                                    reducedcosts
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    On invitation can offer
+                                                    Arbitration and mediation
+                                                    support where Management and
+                                                    staff disagree.
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>Member Savings</p>
+                                            </li>
+                                            <li>
+                                                <p>Networking</p>
                                             </li>
                                         </ul>
                                     </Col>
@@ -212,44 +266,107 @@ const Membership = () => {
                                             <u>Professional Members</u>
                                         </h5>
                                         <p>
-                                            If you meet all the criteria below,
-                                            please click register now to begin.
-                                            Please review benefits and fees
-                                            here.
+                                            Human resource professionals who
+                                            have obtained accreditation from
+                                            established human Resource
+                                            management training institutions,
+                                            approved by the Governing Council,
+                                            shall be admitted as professional
+                                            members of the Association.
+                                        </p>
+                                        <p>
+                                            Professional Members shall be
+                                            entitled to:
                                         </p>
                                         <ul>
                                             <li>
                                                 <p>
-                                                    Must have studied Human
-                                                    Resource Management at
-                                                    undergraduate or
-                                                    postgraduate level or
-                                                    practicing Human Resource in
-                                                    formal organizations
+                                                    Contribution to HR
+                                                    legislation and Governance
+                                                    issues
                                                 </p>
                                             </li>
                                             <li>
                                                 <p>
-                                                    Must not have any criminal
-                                                    record in employment.
+                                                    Obtain information on the HR
+                                                    Management Practices and
+                                                    Trends through a periodical
+                                                    newsletter.
                                                 </p>
                                             </li>
                                             <li>
                                                 <p>
-                                                    Must be willing to comply
-                                                    with the fees structure.
+                                                    Annual Recognition of
+                                                    outstanding quality
+                                                    performance in the HR
+                                                    Profession (Annual HR
+                                                    REVEAL)
                                                 </p>
                                             </li>
                                             <li>
                                                 <p>
-                                                    Must be willing to remain
-                                                    non-political
+                                                    Subsidized Capacity Building
+                                                    or Training on HR topical
+                                                    issues
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>Networking Opportunities</p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Free Coaching and Mentoring
+                                                    Sessions per Quarter
                                                 </p>
                                             </li>
                                             <li>
                                                 <p>
-                                                    Must be willing to abide by
-                                                    code of ethics
+                                                    Be part of the pressure
+                                                    group to safeguard the
+                                                    professional interests of
+                                                    the members.
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Exercise full voting rights
+                                                    in the affairs of the
+                                                    Association
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Exclusive Membership Lapel
+                                                    pin identification
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>Exclusive Membership ID</p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Platform for access to
+                                                    consultancy projects
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Access to upcoming vacancies
+                                                    in HR field
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Access to Subsidized Member
+                                                    Savings/Capital (For Those
+                                                    who join the Human Resource
+                                                    Managers SACCO)
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Use the initials PHRMAU
+                                                    after their names
                                                 </p>
                                             </li>
                                         </ul>
@@ -259,92 +376,64 @@ const Membership = () => {
                                             <u>Associate/ Student Members</u>
                                         </h5>
                                         <p>
-                                            If you meet all the criteria below,
-                                            please click register now to begin.
-                                            Please review benefits and fees
-                                            here.
+                                            The Association shall admit students
+                                            (undergraduate and postgraduate) in
+                                            the area of human resource
+                                            management practice as Associate
+                                            members of the Association.
+                                            Associates shallbe entitled to
+                                            exercise full voting rights in the
+                                            affairs of theAssociation.
                                         </p>
-                                        <ul>
-                                            <li>
-                                                <p>
-                                                    Must have studied Human
-                                                    Resource Management at
-                                                    undergraduate or
-                                                    postgraduate level or
-                                                    practicing Human Resource in
-                                                    formal organizations
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p>
-                                                    Must not have any criminal
-                                                    record in employment.
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p>
-                                                    Must be willing to comply
-                                                    with the fees structure.
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p>
-                                                    Must be willing to remain
-                                                    non-political
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p>
-                                                    Must be willing to abide by
-                                                    code of ethics
-                                                </p>
-                                            </li>
-                                        </ul>
-                                    </Col>
-                                    <Col className="text-justify" md="6">
-                                        <h5 className="font-title custom-title font-weight-bold">
-                                            <u>Fellows</u>
-                                        </h5>
                                         <p>
-                                            If you meet all the criteria below,
-                                            please click register now to begin.
-                                            Please review benefits and fees
-                                            here.
+                                            Associate members will be entitled
+                                            to:
                                         </p>
                                         <ul>
                                             <li>
                                                 <p>
-                                                    Must have studied Human
-                                                    Resource Management at
-                                                    undergraduate or
-                                                    postgraduate level or
-                                                    practicing Human Resource in
-                                                    formal organizations
+                                                    Guidance and support to
+                                                    members who wish to purse
+                                                    Human ResourceManagement
+                                                    Practice (CareerSupport)
                                                 </p>
                                             </li>
                                             <li>
                                                 <p>
-                                                    Must not have any criminal
-                                                    record in employment.
+                                                    Governing Council
+                                                    representation
                                                 </p>
                                             </li>
                                             <li>
                                                 <p>
-                                                    Must be willing to comply
-                                                    with the fees structure.
+                                                    Career Development sessions
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>HR Clinic sessions</p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Internship placement access
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>Entry job placement</p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Access to senior HR
+                                                    professionals
                                                 </p>
                                             </li>
                                             <li>
                                                 <p>
-                                                    Must be willing to remain
-                                                    non-political
+                                                    Access to HR job
+                                                    opportunities
                                                 </p>
                                             </li>
                                             <li>
-                                                <p>
-                                                    Must be willing to abide by
-                                                    code of ethics
-                                                </p>
+                                                <p>Members Savings</p>
                                             </li>
                                         </ul>
                                     </Col>
@@ -353,45 +442,184 @@ const Membership = () => {
                                             <u>Honorary Members</u>
                                         </h5>
                                         <p>
-                                            If you meet all the criteria below,
-                                            please click register now to begin.
-                                            Please review benefits and fees
-                                            here.
+                                            The Governing Council may confer
+                                            upon individuals, the title of
+                                            Honorary member of the Association
+                                            in recognition of exceptional,
+                                            meritorious or outstanding services,
+                                            inwhatever capacity, to the
+                                            Association. They will not have any
+                                            votingrights.
+                                        </p>
+                                        <p>
+                                            Honorary members will be entitled
+                                            to:
                                         </p>
                                         <ul>
                                             <li>
                                                 <p>
-                                                    Must have studied Human
-                                                    Resource Management at
-                                                    undergraduate or
-                                                    postgraduate level or
-                                                    practicing Human Resource in
-                                                    formal organizations
+                                                    Use the letters HHRMAU after
+                                                    their names
                                                 </p>
                                             </li>
                                             <li>
                                                 <p>
-                                                    Must not have any criminal
-                                                    record in employment.
+                                                    Highlighted profile on HRMAU
+                                                    communication channels.
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>Member Savings</p>
+                                            </li>
+                                        </ul>
+                                    </Col>
+                                    <Col className="text-justify" md="6">
+                                        <h5 className="font-title custom-title font-weight-bold">
+                                            <u>Fellows</u>
+                                        </h5>
+                                        <p>
+                                            The Governing Council may confer
+                                            fellowships upon members in
+                                            recognition of distinction and
+                                            outstanding practice in human
+                                            resource management, in accordance
+                                            with rules to be established by the
+                                            Governing Council and approved by
+                                            the General Assembly. Fellows shall
+                                            be entitled to exercise full voting
+                                            rights in the affairs of the
+                                            Association.
+                                        </p>
+                                        <p>Fellows will be entitled to:</p>
+                                        <ul>
+                                            <li>
+                                                <p>
+                                                    Use the letters FHRMAU after
+                                                    theirnames
                                                 </p>
                                             </li>
                                             <li>
                                                 <p>
-                                                    Must be willing to comply
-                                                    with the fees structure.
+                                                    Published on HRMAU Website
+                                                    for recognition
                                                 </p>
                                             </li>
                                             <li>
                                                 <p>
-                                                    Must be willing to remain
-                                                    non-political
+                                                    Contribution to HR
+                                                    legislation and governance
+                                                    issues
                                                 </p>
                                             </li>
                                             <li>
                                                 <p>
-                                                    Must be willing to abide by
-                                                    code of ethics
+                                                    Be part of the pressure
+                                                    group to safeguard the
+                                                    professional interests of
+                                                    the
                                                 </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Contribution to HR
+                                                    legislation and governance
+                                                    issues
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Exercise full voting rights
+                                                    in the affairs of the
+                                                    Association
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Obtain information on the HR
+                                                    management practice through
+                                                    a periodical newsletter
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Exclusive Membership Lapel
+                                                    pin identification
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>Exclusive Membership ID</p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Career transition management
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Benchmarking for HR & OD
+                                                    policy, strategy and
+                                                    practices
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Annual recognition of
+                                                    outstanding quality
+                                                    performance in the HR
+                                                    Profession
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Platform for access to
+                                                    consultancy projects
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Participation in themed
+                                                    learning sessions
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Access to annual learning
+                                                    program in the profession
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Access to upcoming vacancies
+                                                    in HR field
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>Periodic HR trendsupdates</p>
+                                            </li>
+                                            <li>
+                                                <p>Online resource centre</p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Exclusive hrmau@org.ug email
+                                                    address for exclusive
+                                                    membership only access
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Free participation in one
+                                                    workshop annually
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Access to consultancy
+                                                    opportunities
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>Member Savings</p>
                                             </li>
                                         </ul>
                                     </Col>

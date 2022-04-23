@@ -46,7 +46,10 @@
                                 <tr>
                                     <td class="align-middle">{{$item->newsTitle}}</td>
                                     <td class="align-middle">{{$item->newsCategory}}</td>
-                                    <td class="align-middle">{{$item->newsDesc}}</td>
+                                    <td class="align-middle">
+                                        {{Str::limit($item->newsDesc, 150)}}
+                                        <a class="mt-2 btn-sm btn-outline-primary" href="/news/more/{{ $item->id }}" role="button"> More details...</a>
+                                    </td>
                                     <td class="align-middle"><img src="{{ asset('/uploads/news/'.$item ->image)}}" width="60px" alt="Image"></td>
                                     <td >
                                         <div class="table-data-feature">

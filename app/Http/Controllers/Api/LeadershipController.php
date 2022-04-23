@@ -24,10 +24,7 @@ class LeadershipController extends Controller
     {
         $leadership = Leadership::all();
         
-        return response()->json([
-            'success' => true,
-            'data' => $leadership
-        ]);
+        return response()->json($leadership, 200);
     }
 
     /**

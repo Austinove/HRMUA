@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { Container, Row, Col, Button } from "reactstrap";
 import { connect } from "react-redux";
 import { fetch_knowledge } from "../../actions/knowledgeAction";
+import { imageUrl } from "../../constants";
 
 function SingleKnowledge({
     fetch_knowledge,
@@ -73,8 +74,10 @@ function SingleKnowledge({
                                   </Row>
                                   {know.document ? (
                                       <a
-                                          href={`/uploads/document/${know.document}`}
-                                          download
+                                          target="_blank"
+                                          //   href={`/uploads/document/${know.document}`}
+                                          href={`${imageUrl}/user/knowledge/${know.document}`}
+                                          //   download
                                       >
                                           <Button
                                               color="warning"

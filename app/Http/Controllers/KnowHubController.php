@@ -55,17 +55,17 @@ class KnowHubController extends Controller
         ]);
           
         $knowhub = new Knowledgehub;
-        $knowhub ->title=$request->input('title');
-        $knowhub ->description=$request->input('description');
+        $knowhub->title=$request->input('title');
+        $knowhub->description=$request->input('description');
         if ($request->hasFile('document')) {
             $file = $request->file('document');
-            $extension=$file ->getClientOriginalExtension();
+            $extension=$file->getClientOriginalExtension();
             $filename = time().'.'.$extension;
             $file->move('uploads/document/',$filename);
-            $knowhub ->document=$filename;
+            $knowhub->document=$filename;
         }
 
-        $knowhub  ->save();
+        $knowhub->save();
         return redirect('/knowHub')->with('success','Item Added');
     }
 
@@ -76,15 +76,15 @@ class KnowHubController extends Controller
             'document' => 'required|file|mimes:doc,docx,,xlsx,xls,pdf,',
         ]);
         $knowhub = Knowledgehub::find($id);
-        $knowhub ->title=$request->input('title');
-        $knowhub ->description=$request->input('description');
+        $knowhub->title=$request->input('title');
+        $knowhub->description=$request->input('description');
         if($request->hasFile('document')) {
             $document = $request->file('document');
             $filename = $document->getClientOriginalName();
             $document->move(public_path('uploads/document'), $filename);
             $knowhub->document = $request->file('document')->getClientOriginalName();
         }
-        $knowhub ->update();
+        $knowhub->update();
         return redirect('/knowHub')->with('success','Document updated');
     }
 
@@ -96,7 +96,8 @@ class KnowHubController extends Controller
      */
     public function show($id)
     {
-        //
+        $knowhub = Knowledgehub::find($id);
+        return view('admin.knowledge.knowledgePage')->with('knowhub',$knowhub);
     }
 
    

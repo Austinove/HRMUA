@@ -47,7 +47,7 @@ class ProfessionalController extends Controller
         $message = 'Hello there,';
         $message .= '<br/> <strong>HRMUA Application Response</strong>';
         $message .= '<br/> This is to Let You know that your application to be a member of HRMUA has been Approved';
-        $subject = "<strong>HRMUA Application Response</strong>";
+        $subject = "HRMUA Application Response";
         $headers  = 'MIME-Version: 1.0' . "\r\n";
         $headers .= 'Content-type:text/html;charset=UTF-8' . '\r\n';
         $headers .= "from: info@traford.org\r\n";
@@ -67,7 +67,7 @@ class ProfessionalController extends Controller
         $message .= '<br/> <strong>HRMUA Application Response</strong>';
         $message .= '<br/> This is to Let You know that your application to be a member of HRMUA, is Under Review.';
         $message .= '<br/> <strog>We shall let you know shotly about the results</strog>';
-        $subject = "<strong>HRMUA Application Response</strong>";
+        $subject = "HRMUA Application Response";
         $headers  = 'MIME-Version: 1.0' . "\r\n";
         $headers .= 'Content-type:text/html;charset=UTF-8' . '\r\n';
         $headers .= "from: info@traford.org\r\n";
@@ -87,7 +87,7 @@ class ProfessionalController extends Controller
         $message .= '<br/> <strong>HRMUA Application Response</strong>';
         $message .= '<br/> This is to Let You know that your application to be a member of HRMUA, is Declined.';
         $message .= '<br/> <strog>Try Again Please...</strog>';
-        $subject = "<strong>HRMUA Application Response</strong>";
+        $subject = "HRMUA Application Response";
         $headers  = 'MIME-Version: 1.0' . "\r\n";
         $headers .= 'Content-type:text/html;charset=UTF-8' . '\r\n';
         $headers .= "from: info@traford.org\r\n";

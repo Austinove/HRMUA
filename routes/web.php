@@ -22,6 +22,10 @@ Route::get('/dashboard', function () {
 })->name("myDashboard");
 
 Auth::routes();
+Route::get("/user/knowledge/{id}", function($fileName){
+    $pathName = 'uploads/document/'.$fileName;
+    return response()->file($pathName);
+});
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -90,6 +94,7 @@ Route::get('/delete-type/{id}', 'MemberTypeController@destroy');
 /*
 Knowledge Hub
 */
+Route::get('/knowledge/more/{id}', 'KnowHubController@show');
 Route::get('/knowHub', 'KnowHubController@index');
 Route::post('/post-knowHub', 'KnowHubController@store');
 Route::put('/edit-knowHub/{id}', 'KnowHubController@edit');
@@ -97,6 +102,7 @@ Route::get('/delete-knowhub/{id}', 'KnowHubController@destroy');
 /*
 News,Events and updates
 */
+Route::get('/news/more/{id}', 'NewsUpdateController@show');
 Route::get('/newsView', 'NewsUpdateController@newsupdates');
 Route::post('/post-news', 'NewsUpdateController@storeNews');
 Route::put('/edit-news/{id}', 'NewsUpdateController@editNews');

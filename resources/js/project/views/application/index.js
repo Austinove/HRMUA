@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row, Col, Label, Input, FormGroup } from "reactstrap";
 import CustomHeader from "../../components/Headers/customHeader";
-import Retired from "./retired";
+// import Retired from "./retired";
 import Professional from "./professional";
 import Coporate from "./coporate";
 import Student from "./student";
@@ -36,7 +36,10 @@ const Application = () => {
                 </Container>
             </div>
             <div className="main">
-                <div className="section text-left pt-3">
+                <div
+                    className="section text-left pt-3"
+                    style={{ minHeight: "40vh" }}
+                >
                     <Container>
                         <Row>
                             <Col className="mx-auto" md={8}>
@@ -51,23 +54,35 @@ const Application = () => {
                                         <br />
                                         <FormGroup check>
                                             <Label check className="mr-3">
-                                                <Input
-                                                    type="radio"
-                                                    name="memberRadio"
-                                                    value="professional"
-                                                    onChange={memberChange}
-                                                />
-                                                Professional Member
-                                            </Label>|
+                                                <a
+                                                    href="https://hrmau.glueup.com/membership/5209/apply/"
+                                                    target="_blank"
+                                                >
+                                                    <Input
+                                                        type="radio"
+                                                        name="memberRadio"
+                                                        value="professional"
+                                                        onChange={memberChange}
+                                                    />
+                                                    Professional Member
+                                                </a>
+                                            </Label>
+                                            |
                                             <Label check className="mr-3">
-                                                <Input
-                                                    type="radio"
-                                                    name="memberRadio"
-                                                    value="student"
-                                                    onChange={memberChange}
-                                                />
-                                                Student Member
-                                            </Label>|
+                                                <a
+                                                    href="https://hrmau.glueup.com/membership/5210/apply/"
+                                                    target="_blank"
+                                                >
+                                                    <Input
+                                                        type="radio"
+                                                        name="memberRadio"
+                                                        value="student"
+                                                        onChange={memberChange}
+                                                    />
+                                                    Student Member
+                                                </a>
+                                            </Label>
+                                            {/* |
                                             <Label check className="mr-3">
                                                 <Input
                                                     type="radio"
@@ -76,15 +91,21 @@ const Application = () => {
                                                     onChange={memberChange}
                                                 />
                                                 Retired Member
-                                            </Label>|
+                                            </Label> */}
+                                            |
                                             <Label check className="mr-3">
-                                                <Input
-                                                    type="radio"
-                                                    name="memberRadio"
-                                                    value="coporate"
-                                                    onChange={memberChange}
-                                                />
-                                                Coporate Member
+                                                <a
+                                                    href="https://hrmau.glueup.com/membership/4980/apply/"
+                                                    target="_blank"
+                                                >
+                                                    <Input
+                                                        type="radio"
+                                                        name="memberRadio"
+                                                        value="coporate"
+                                                        onChange={memberChange}
+                                                    />
+                                                    Coporate Member
+                                                </a>
                                             </Label>
                                         </FormGroup>
                                     </Col>
@@ -94,9 +115,10 @@ const Application = () => {
                         <hr />
                         <Row>
                             <Col className="ml-auto mr-auto" md="10">
-                                {memberType === "retired" ? (
-                                    <Retired />
-                                ) : memberType === "professional" ? (
+                                {// memberType === "retired" ? (
+                                //     <Retired />
+                                // ) :
+                                memberType === "professional" ? (
                                     <Professional />
                                 ) : memberType === "coporate" ? (
                                     <Coporate />

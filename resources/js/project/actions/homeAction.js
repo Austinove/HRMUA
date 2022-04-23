@@ -15,7 +15,6 @@ export const fetch_homeData = () => {
         return api
             .fetch_homeData()
             .then(response => {
-                console.log(response);
                 dispatch({
                     type: homeConstants.fetch_homeData_success,
                     payload: response.data

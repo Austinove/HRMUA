@@ -38,7 +38,10 @@
                             <tr>
                                 <td>{{$item->id}}</td>
                                 <td class="align-middle">{{$item->title}}</td>
-                                <td class="align-middle">{{$item->description}}</td>
+                                <td class="align-middle">
+                                    {{Str::limit($item->description, 150)}}
+                                    <a class="mt-2 btn-sm btn-outline-primary" href="/knowledge/more/{{ $item->id }}" role="button"> More details...</a>
+                                </td>
                                 <td class="align-middle">{{$item->document}}</td>
                                 <td >
                                     <div class="table-data-feature">

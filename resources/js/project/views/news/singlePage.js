@@ -39,7 +39,7 @@ function SinglePage({ fetch_news, newsData, loading, newsError, match }) {
             <div
             key={index}
                 style={{
-                    backgroundImage: `url(/uploads/news/${ newsVal.image })`
+                    backgroundImage: `url(${imageUrl}/uploads/news/${ newsVal.image })`
                 }}
                 className="page-header single-header"
                 data-parallax={true}
