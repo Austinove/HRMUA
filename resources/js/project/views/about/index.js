@@ -68,19 +68,19 @@ const AboutUs = () => {
                     <Container>
                         <Row>
                             <Col md={6}>
-                                <div className="float-card info text-center bg-white pt-5 px-4">
-                                    <div className="icon icon-info custom-color">
+                                <div className="float-card info bg-white pt-5 px-4">
+                                    <div className="icon icon-info text-center custom-color">
                                         <i className="nc-icon nc-bulb-63" />
                                     </div>
-                                    <div className="description">
-                                        <h4 className="custom-color font-weight-bold text-center ml-2 mb-2 about-head">
-                                            Our Vision
+                                    <div className="description px-5">
+                                        <h4 className="custom-color font-weight-bold ml-2 mb-2 about-head">
+                                            Vision and Mission
                                         </h4>
                                         <p className="custom-text">
-                                            To be a leading Professional
-                                            association in People management
-                                            that enhances competence
-                                            productivity and quality of life
+                                            Vision: <br/> Inspire and nature Human Resource Professionals
+                                        </p>
+                                        <p className="custom-text">
+                                            Mission: <br/> Develop and regulate Human Resource practices that transform people, workplaces, and businesses.
                                         </p>
                                         <Button
                                             className="btn-link"
@@ -93,19 +93,26 @@ const AboutUs = () => {
                                 </div>
                             </Col>
                             <Col md={6}>
-                                <div className="float-card info text-center bg-white pt-5 px-4">
-                                    <div className="icon icon-info custom-color">
+                                <div className="float-card mb-md-5 info bg-white pt-5 px-4">
+                                    <div className="icon icon-info text-center custom-color">
                                         <i className="nc-icon nc-sun-fog-29" />
                                     </div>
-                                    <div className="description">
-                                        <h4 className="custom-color font-weight-bold text-center ml-2 mb-2 about-head">
-                                            Our Mission
+                                    <div className="description px-4">
+                                        <h4 className="custom-color font-weight-bold ml-2 mb-2 about-head">
+                                            Values and Tagline
                                         </h4>
-                                        <p className="custom-text">
-                                            Institute standards, enhance
-                                            development and promote Human
-                                            Resource Management as a strategic
-                                            function in organization
+                                        <p className="pb-0 custom-text">
+                                            Values:
+                                            <ul>
+                                                <li>Stewardship</li>
+                                                <li>Professionalism</li>
+                                                <li>Innovation</li>
+                                                <li>Collaboration</li>
+                                                <li>Integrity</li>
+                                            </ul>
+                                        </p>
+                                        <p className="custom-text custom-color">
+                                            Tagline: Develop and celebrating talent.
                                         </p>
                                         <Button
                                             className="btn-link"
