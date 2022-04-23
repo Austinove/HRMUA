@@ -64,7 +64,7 @@ const AboutUs = () => {
                         </Row>
                     </Container>
                 </div>
-                <div className="section text-left">
+                <div className="section text-left"> 
                     <Container>
                         <Row>
                             <Col md={6}>
